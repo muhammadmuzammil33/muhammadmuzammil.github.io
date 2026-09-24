@@ -2275,3 +2275,405 @@ vs
     }
 
 }
+/* ============================
+   EXPERIENCE SECTION
+   ============================ */
+
+#experience {
+    background: #0b1120;
+    overflow: hidden;
+}
+
+#experience h2 {
+    font-size: 42px;
+    margin-bottom: 20px;
+}
+
+#experience h2::after {
+    content: "";
+    display: block;
+    width: 55px;
+    height: 3px;
+    background: #38bdf8;
+    margin-top: 10px;
+}
+
+
+/* EXPERIENCE CONTAINER */
+
+.experience-container {
+    max-width: 1200px;
+    margin: 60px auto 0;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 25px;
+}
+
+
+/* EXPERIENCE CARD */
+
+.experience-card {
+    position: relative;
+
+    padding: 30px 25px;
+
+    background: rgba(17, 24, 39, 0.9);
+
+    border: 1px solid #1f2937;
+
+    border-radius: 18px;
+
+    overflow: hidden;
+
+    transition:
+        transform 0.45s ease,
+        border-color 0.45s ease,
+        box-shadow 0.45s ease;
+
+    animation: experienceReveal 0.8s ease both;
+}
+
+
+/* TOP LIGHT LINE */
+
+.experience-card::before {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: -100%;
+
+    width: 100%;
+    height: 3px;
+
+    background: linear-gradient(
+        90deg,
+        transparent,
+        #38bdf8,
+        #a855f7,
+        transparent
+    );
+
+    transition: 0.6s ease;
+}
+
+
+.experience-card:hover::before {
+    left: 100%;
+}
+
+
+/* CARD HOVER */
+
+.experience-card:hover {
+    transform: translateY(-12px);
+
+    border-color: #38bdf8;
+
+    box-shadow:
+        0 20px 50px rgba(56, 189, 248, 0.14);
+}
+
+
+/* Different colors */
+
+.experience-card:nth-child(2):hover {
+    border-color: #a855f7;
+
+    box-shadow:
+        0 20px 50px rgba(168, 85, 247, 0.14);
+}
+
+
+.experience-card:nth-child(3):hover {
+    border-color: #22c55e;
+
+    box-shadow:
+        0 20px 50px rgba(34, 197, 94, 0.14);
+}
+
+
+/* ICON */
+
+.experience-icon {
+    width: 65px;
+    height: 65px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 30px;
+
+    background: #0f172a;
+
+    border: 1px solid #263449;
+
+    border-radius: 15px;
+
+    margin-bottom: 22px;
+
+    transition:
+        transform 0.4s ease,
+        box-shadow 0.4s ease;
+}
+
+
+.experience-card:hover .experience-icon {
+    transform: rotate(-6deg) scale(1.1);
+
+    box-shadow:
+        0 0 25px rgba(56, 189, 248, 0.2);
+}
+
+
+/* DATE */
+
+.experience-date {
+    display: inline-block;
+
+    color: #38bdf8;
+
+    font-size: 13px;
+
+    font-weight: bold;
+
+    letter-spacing: 0.8px;
+
+    margin-bottom: 10px;
+}
+
+
+/* TITLE */
+
+.experience-card h3 {
+    color: #e5e7eb;
+
+    font-size: 21px;
+
+    line-height: 1.4;
+
+    margin-bottom: 8px;
+}
+
+
+/* COMPANY */
+
+.experience-card h4 {
+    color: #a855f7;
+
+    font-size: 16px;
+
+    line-height: 1.5;
+
+    margin-bottom: 5px;
+}
+
+
+/* LOCATION */
+
+.company-location {
+    color: #64748b;
+
+    font-size: 13px;
+
+    margin-bottom: 18px;
+}
+
+
+/* DESCRIPTION */
+
+.experience-description {
+    color: #94a3b8;
+
+    font-size: 14px;
+
+    line-height: 1.75;
+
+    margin-bottom: 20px;
+}
+
+
+/* TAGS */
+
+.experience-tags {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 7px;
+}
+
+
+.experience-tags span {
+    padding: 5px 10px;
+
+    background: #0b1120;
+
+    border: 1px solid #263449;
+
+    border-radius: 20px;
+
+    color: #94a3b8;
+
+    font-size: 11px;
+
+    transition: 0.3s ease;
+}
+
+
+.experience-tags span:hover {
+    color: #38bdf8;
+
+    border-color: #38bdf8;
+
+    transform: translateY(-2px);
+}
+
+
+/* ============================
+   CARD ANIMATION
+   ============================ */
+
+.experience-card:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+.experience-card:nth-child(2) {
+    animation-delay: 0.25s;
+}
+
+.experience-card:nth-child(3) {
+    animation-delay: 0.4s;
+}
+
+
+@keyframes experienceReveal {
+
+    from {
+        opacity: 0;
+        transform: translateY(35px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+/* ============================
+   TABLET
+   ============================ */
+
+@media (max-width: 950px) {
+
+    .experience-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+
+/* ============================
+   MOBILE
+   ============================ */
+
+@media (max-width: 650px) {
+
+    #experience {
+        padding: 70px 6%;
+    }
+
+    #experience h2 {
+        font-size: 34px;
+    }
+
+    .experience-container {
+        grid-template-columns: 1fr;
+
+        margin-top: 40px;
+
+        gap: 20px;
+    }
+
+    .experience-card {
+        padding: 25px 22px;
+    }
+
+}
+/* ============================
+   LINKEDIN HEADER BUTTON
+   ============================ */
+
+.linkedin-btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    padding: 9px 15px;
+
+    color: #38bdf8;
+    text-decoration: none;
+
+    border: 1px solid #38bdf8;
+    border-radius: 7px;
+
+    font-size: 14px;
+    font-weight: bold;
+
+    transition: 0.3s ease;
+
+    white-space: nowrap;
+}
+
+.linkedin-btn span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 22px;
+    height: 22px;
+
+    background: #38bdf8;
+    color: #07111f;
+
+    border-radius: 4px;
+
+    font-size: 14px;
+    font-weight: 900;
+}
+
+.linkedin-btn:hover {
+    background: #38bdf8;
+    color: #07111f;
+
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 8px 20px rgba(56, 189, 248, 0.25);
+}
+
+.linkedin-btn:hover span {
+    background: #07111f;
+    color: #38bdf8;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 900px) {
+
+    nav {
+        flex-wrap: wrap;
+    }
+
+    .linkedin-btn {
+        margin-top: 5px;
+    }
+
+}
