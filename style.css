@@ -4548,3 +4548,14 @@ html {
 #projects {
     scroll-margin-top: 80px;
 }
+#seo-projects .section-title {
+    text-align: center !important;
+}
+
+#seo-projects .section-title h2 {
+    text-align: center !important;
+}
+
+#seo-projects .section-title p {
+    text-align: center !important;
+}
