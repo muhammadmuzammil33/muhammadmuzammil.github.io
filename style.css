@@ -4521,3 +4521,10 @@ vs
         font-size: 22px;
     }
 }
+html {
+    scroll-behavior: smooth;
+}
+
+#projects {
+    scroll-margin-top: 80px;
+}
