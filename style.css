@@ -4559,3 +4559,10 @@ html {
 #seo-projects .section-title p {
     text-align: center !important;
 }
+.seo-projects-title {
+    text-align: center;
+}
+
+.section-description {
+    text-align: center;
+}
