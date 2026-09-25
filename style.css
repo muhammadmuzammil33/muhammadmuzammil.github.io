@@ -4570,3 +4570,8 @@ html {
     margin-left: auto !important;
     margin-right: auto !important;
 }
+#seo-projects .section-description {
+    text-align: center !important;
+    width: 100% !important;
+    margin: 0 auto 50px !important;
+}
