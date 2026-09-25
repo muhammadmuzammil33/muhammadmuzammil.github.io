@@ -4566,3 +4566,7 @@ html {
 .section-description {
     text-align: center;
 }
+.seo-projects-title::after {
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
