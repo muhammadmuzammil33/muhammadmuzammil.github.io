@@ -95,7 +95,27 @@ nav ul {
     height: 17px;
     font-size: 11px;
 }
+/* Navbar Logo */
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    color: #fff;
+}
 
+.brand img {
+    width: 42px;
+    height: 42px;
+    object-fit: contain;
+    display: block;
+}
+
+.brand span {
+    font-size: 18px;
+    font-weight: 700;
+    white-space: nowrap;
+}
 /* =========================
    HERO
 ========================= */
