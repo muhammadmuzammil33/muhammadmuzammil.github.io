@@ -80,7 +80,7 @@ nav ul li a:hover::after {
 nav ul {
     display: flex;
     align-items: center;
-    gap: 18px;
+    gap: 15px;
     flex-wrap: nowrap;
 }
 
