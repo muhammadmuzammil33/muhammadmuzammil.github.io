@@ -4890,3 +4890,29 @@ html {
     }
 
 }
+.pmd-experience-card {
+    transition: 0.3s ease;
+}
+
+.pmd-experience-card:hover {
+    transform: translateY(-8px);
+    border-color: #38bdf8;
+    box-shadow: 0 0 20px rgba(56, 189, 248, 0.15);
+}
+
+.pmd-experience-card h3 {
+    color: #ffffff;
+    font-size: 22px;
+    margin-bottom: 8px;
+}
+
+.pmd-experience-card h4 {
+    color: #38bdf8;
+    font-size: 15px;
+    margin-bottom: 10px;
+}
+
+.pmd-experience-card p {
+    color: #94a3b8;
+    font-size: 14px;
+}
