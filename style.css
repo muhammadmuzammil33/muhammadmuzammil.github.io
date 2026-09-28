@@ -75,7 +75,26 @@ nav ul li a::after {
 nav ul li a:hover::after {
     width: 100%;
 }
+/* Navbar fix after adding Certifications */
 
+nav ul {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    flex-wrap: nowrap;
+}
+
+.linkedin-btn {
+    padding: 6px 8px;
+    font-size: 11px;
+    gap: 4px;
+}
+
+.linkedin-btn span {
+    width: 17px;
+    height: 17px;
+    font-size: 11px;
+}
 
 /* =========================
    HERO
