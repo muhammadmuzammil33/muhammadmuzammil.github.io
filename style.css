@@ -4916,3 +4916,13 @@ html {
     color: #94a3b8;
     font-size: 14px;
 }
+header {
+    position: fixed !important;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 9999;
+}
+body {
+    padding-top: 80px;
+}
