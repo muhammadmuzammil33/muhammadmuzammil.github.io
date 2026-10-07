@@ -4927,52 +4927,66 @@ body {
     padding-top: 80px;
 }
 /* =========================
-   Ghotki Case Management Project
+   Ghotki Case Management
 ========================= */
 
 .case-management-preview {
     position: relative;
     overflow: hidden;
-    background:
-        linear-gradient(135deg, rgba(16, 185, 129, 0.08), rgba(56, 189, 248, 0.05)),
-        #07111f;
     min-height: 230px;
+    background: #07111f;
 }
+
+/* Browser-style top dots */
+
+.case-management-preview .preview-top {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 12px 15px;
+    border-bottom: 1px solid rgba(148, 163, 184, 0.12);
+}
+
+.case-management-preview .preview-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #64748b;
+}
+
+/* Dashboard */
 
 .case-dashboard {
     display: flex;
-    width: 82%;
-    height: 145px;
-    margin: 28px auto 0;
-    border: 1px solid rgba(56, 189, 248, 0.25);
-    border-radius: 8px;
+    width: 78%;
+    height: 125px;
+    margin: 22px auto 0;
     overflow: hidden;
+    border: 1px solid rgba(148, 163, 184, 0.16);
+    border-radius: 7px;
     background: #0b1728;
-    box-shadow: 0 0 25px rgba(56, 189, 248, 0.08);
 }
 
+/* Sidebar */
+
 .case-sidebar {
-    width: 25%;
-    padding: 18px 10px;
-    background: rgba(15, 23, 42, 0.95);
-    border-right: 1px solid rgba(56, 189, 248, 0.12);
+    width: 23%;
+    padding: 17px 10px;
+    background: #0d1a2d;
+    border-right: 1px solid rgba(148, 163, 184, 0.12);
 }
 
 .case-sidebar span {
     display: block;
-    height: 6px;
-    margin-bottom: 13px;
-    border-radius: 4px;
-    background: rgba(56, 189, 248, 0.35);
-}
-
-.case-sidebar span:first-child {
     width: 75%;
-    background: #38bdf8;
+    height: 5px;
+    margin-bottom: 13px;
+    border-radius: 3px;
+    background: #334155;
 }
 
 .case-sidebar span:nth-child(2) {
-    width: 90%;
+    width: 88%;
 }
 
 .case-sidebar span:nth-child(3) {
@@ -4983,57 +4997,92 @@ body {
     width: 80%;
 }
 
+.case-sidebar .active {
+    width: 78%;
+    background: #10b981;
+}
+
+/* Main dashboard area */
+
 .case-content {
     flex: 1;
-    padding: 16px;
+    padding: 17px;
 }
 
 .case-header-line {
-    width: 48%;
-    height: 8px;
-    border-radius: 4px;
-    background: #10b981;
+    width: 45%;
+    height: 7px;
     margin-bottom: 15px;
+    border-radius: 4px;
+    background: #38bdf8;
 }
+
+/* Stats */
 
 .case-stats {
     display: flex;
-    gap: 8px;
+    gap: 9px;
     margin-bottom: 15px;
 }
 
 .case-stats div {
     flex: 1;
-    height: 30px;
+    height: 27px;
+    border: 1px solid rgba(148, 163, 184, 0.12);
     border-radius: 5px;
-    background: rgba(16, 185, 129, 0.14);
-    border: 1px solid rgba(16, 185, 129, 0.2);
+    background: #122238;
 }
+
+/* Table */
 
 .case-table {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 6px;
+    gap: 7px;
 }
 
 .case-table span {
-    height: 7px;
+    height: 6px;
     border-radius: 3px;
-    background: rgba(148, 163, 184, 0.22);
+    background: #334155;
 }
 
 .case-table span:nth-child(2),
 .case-table span:nth-child(6) {
-    background: rgba(16, 185, 129, 0.55);
+    background: #10b981;
+}
+
+/* Project number
+   Uses the same original project-number positioning */
+.case-management-preview .project-number {
+    position: absolute;
+    bottom: 15px;
+    right: 18px;
+    color: rgba(255, 255, 255, 0.18);
+}
+
+/* Local/Internal status */
+
+.project-status {
+    margin-top: 22px;
+    padding-top: 16px;
+    border-top: 1px solid rgba(148, 163, 184, 0.12);
 }
 
 .local-project-btn {
+    display: inline-flex;
+    align-items: center;
+    padding: 7px 12px;
+    border: 1px solid rgba(16, 185, 129, 0.35);
+    border-radius: 5px;
     color: #10b981 !important;
-    border-color: rgba(16, 185, 129, 0.45) !important;
-    cursor: default;
+    background: rgba(16, 185, 129, 0.06);
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.3px;
 }
 
 .local-project-btn:hover {
-    background: rgba(16, 185, 129, 0.08) !important;
+    background: rgba(16, 185, 129, 0.10);
     color: #10b981 !important;
 }
