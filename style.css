@@ -4926,3 +4926,114 @@ header {
 body {
     padding-top: 80px;
 }
+/* =========================
+   Ghotki Case Management Project
+========================= */
+
+.case-management-preview {
+    position: relative;
+    overflow: hidden;
+    background:
+        linear-gradient(135deg, rgba(16, 185, 129, 0.08), rgba(56, 189, 248, 0.05)),
+        #07111f;
+    min-height: 230px;
+}
+
+.case-dashboard {
+    display: flex;
+    width: 82%;
+    height: 145px;
+    margin: 28px auto 0;
+    border: 1px solid rgba(56, 189, 248, 0.25);
+    border-radius: 8px;
+    overflow: hidden;
+    background: #0b1728;
+    box-shadow: 0 0 25px rgba(56, 189, 248, 0.08);
+}
+
+.case-sidebar {
+    width: 25%;
+    padding: 18px 10px;
+    background: rgba(15, 23, 42, 0.95);
+    border-right: 1px solid rgba(56, 189, 248, 0.12);
+}
+
+.case-sidebar span {
+    display: block;
+    height: 6px;
+    margin-bottom: 13px;
+    border-radius: 4px;
+    background: rgba(56, 189, 248, 0.35);
+}
+
+.case-sidebar span:first-child {
+    width: 75%;
+    background: #38bdf8;
+}
+
+.case-sidebar span:nth-child(2) {
+    width: 90%;
+}
+
+.case-sidebar span:nth-child(3) {
+    width: 65%;
+}
+
+.case-sidebar span:nth-child(4) {
+    width: 80%;
+}
+
+.case-content {
+    flex: 1;
+    padding: 16px;
+}
+
+.case-header-line {
+    width: 48%;
+    height: 8px;
+    border-radius: 4px;
+    background: #10b981;
+    margin-bottom: 15px;
+}
+
+.case-stats {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 15px;
+}
+
+.case-stats div {
+    flex: 1;
+    height: 30px;
+    border-radius: 5px;
+    background: rgba(16, 185, 129, 0.14);
+    border: 1px solid rgba(16, 185, 129, 0.2);
+}
+
+.case-table {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 6px;
+}
+
+.case-table span {
+    height: 7px;
+    border-radius: 3px;
+    background: rgba(148, 163, 184, 0.22);
+}
+
+.case-table span:nth-child(2),
+.case-table span:nth-child(6) {
+    background: rgba(16, 185, 129, 0.55);
+}
+
+.local-project-btn {
+    color: #10b981 !important;
+    border-color: rgba(16, 185, 129, 0.45) !important;
+    cursor: default;
+}
+
+.local-project-btn:hover {
+    background: rgba(16, 185, 129, 0.08) !important;
+    color: #10b981 !important;
+}
