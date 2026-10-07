@@ -4926,115 +4926,39 @@ header {
 body {
     padding-top: 80px;
 }
-/* =========================================
-   PROJECT 03
-   GHOTKI CASE MANAGEMENT SYSTEM
-========================================= */
+/* ================================
+   PROJECT 03 - CASE MANAGEMENT
+================================ */
 
 .case-management-preview {
     position: relative;
     overflow: hidden;
     min-height: 230px;
     background: #07111f;
-    border-radius: inherit;
+    border-radius: 8px;
 }
 
-/* -----------------------------------------
-   Code Preview
------------------------------------------ */
-
-.case-management-preview .code-preview {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 88%;
-    transform: translate(-50%, -50%);
-    font-family: "Courier New", monospace;
-    font-size: 13px;
-    line-height: 2;
-    white-space: nowrap;
+.case-management-preview img {
+    width: 100%;
+    height: 230px;
+    display: block;
+    object-fit: cover;
+    object-position: center;
 }
-
-/* -----------------------------------------
-   Individual Code Lines
------------------------------------------ */
-
-.case-management-preview .code-line {
-    opacity: 0;
-    transform: translateX(-14px);
-    animation: caseCodeReveal 0.6s ease forwards;
-}
-
-.case-management-preview .code-line:nth-child(1) {
-    animation-delay: 0.2s;
-}
-
-.case-management-preview .code-line:nth-child(2) {
-    animation-delay: 0.7s;
-}
-
-.case-management-preview .code-line:nth-child(3) {
-    animation-delay: 1.2s;
-}
-
-.case-management-preview .code-line:nth-child(4) {
-    animation-delay: 1.7s;
-}
-
-.case-management-preview .code-line:nth-child(5) {
-    animation-delay: 2.2s;
-}
-
-@keyframes caseCodeReveal {
-    to {
-        opacity: 1;
-        transform: translateX(0);
-    }
-}
-
-/* -----------------------------------------
-   Code Colors
------------------------------------------ */
-
-.case-management-preview .code-keyword {
-    color: #38bdf8;
-}
-
-.case-management-preview .code-variable {
-    color: #e2e8f0;
-}
-
-.case-management-preview .code-symbol {
-    color: #64748b;
-}
-
-.case-management-preview .code-string {
-    color: #10b981;
-}
-
-.case-management-preview .code-function {
-    color: #c084fc;
-}
-
-.case-management-preview .code-property {
-    color: #f59e0b;
-}
-
-/* -----------------------------------------
-   Project Number
-   Same bottom-right position
------------------------------------------ */
 
 .case-management-preview .project-number {
     position: absolute;
     right: 18px;
     bottom: 15px;
+    z-index: 2;
+
     color: rgba(255, 255, 255, 0.18);
+    font-size: 42px;
+    font-weight: 800;
+    line-height: 1;
 }
 
-/* -----------------------------------------
-   Project Status
------------------------------------------ */
+/* Local / Internal Badge */
 
 .case-management-preview + .project-info .project-status {
     margin-top: 22px;
@@ -5042,47 +4966,45 @@ body {
     border-top: 1px solid rgba(148, 163, 184, 0.12);
 }
 
-/* -----------------------------------------
-   Local / Internal Badge
------------------------------------------ */
-
 .case-management-preview + .project-info .local-project-btn {
     display: inline-flex;
     align-items: center;
+
     padding: 7px 12px;
+
     border: 1px solid rgba(16, 185, 129, 0.35);
     border-radius: 5px;
+
     background: rgba(16, 185, 129, 0.06);
+
     color: #10b981 !important;
+
     font-size: 11px;
     font-weight: 600;
     letter-spacing: 0.3px;
 }
-
-/* -----------------------------------------
-   Badge Hover
------------------------------------------ */
 
 .case-management-preview + .project-info .local-project-btn:hover {
     background: rgba(16, 185, 129, 0.10);
     color: #10b981 !important;
 }
 
-/* -----------------------------------------
-   Mobile Responsive
------------------------------------------ */
+
+/* Mobile */
 
 @media (max-width: 768px) {
 
-    .case-management-preview .code-preview {
-        width: 94%;
-        font-size: 10px;
-        line-height: 2.2;
+    .case-management-preview {
+        min-height: 200px;
+    }
+
+    .case-management-preview img {
+        height: 200px;
     }
 
     .case-management-preview .project-number {
         right: 12px;
         bottom: 10px;
+        font-size: 34px;
     }
-
 }
