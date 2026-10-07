@@ -4926,163 +4926,163 @@ header {
 body {
     padding-top: 80px;
 }
-/* =========================
-   Ghotki Case Management
-========================= */
+/* =========================================
+   PROJECT 03
+   GHOTKI CASE MANAGEMENT SYSTEM
+========================================= */
 
 .case-management-preview {
     position: relative;
     overflow: hidden;
     min-height: 230px;
     background: #07111f;
+    border-radius: inherit;
 }
 
-/* Browser-style top dots */
+/* -----------------------------------------
+   Code Preview
+----------------------------------------- */
 
-.case-management-preview .preview-top {
-    display: flex;
-    align-items: center;
-    gap: 6px;
-    padding: 12px 15px;
-    border-bottom: 1px solid rgba(148, 163, 184, 0.12);
-}
-
-.case-management-preview .preview-dot {
-    width: 6px;
-    height: 6px;
-    border-radius: 50%;
-    background: #64748b;
-}
-
-/* Dashboard */
-
-.case-dashboard {
-    display: flex;
-    width: 78%;
-    height: 125px;
-    margin: 22px auto 0;
-    overflow: hidden;
-    border: 1px solid rgba(148, 163, 184, 0.16);
-    border-radius: 7px;
-    background: #0b1728;
-}
-
-/* Sidebar */
-
-.case-sidebar {
-    width: 23%;
-    padding: 17px 10px;
-    background: #0d1a2d;
-    border-right: 1px solid rgba(148, 163, 184, 0.12);
-}
-
-.case-sidebar span {
-    display: block;
-    width: 75%;
-    height: 5px;
-    margin-bottom: 13px;
-    border-radius: 3px;
-    background: #334155;
-}
-
-.case-sidebar span:nth-child(2) {
+.case-management-preview .code-preview {
+    position: absolute;
+    top: 50%;
+    left: 50%;
     width: 88%;
+    transform: translate(-50%, -50%);
+    font-family: "Courier New", monospace;
+    font-size: 13px;
+    line-height: 2;
+    white-space: nowrap;
 }
 
-.case-sidebar span:nth-child(3) {
-    width: 65%;
+/* -----------------------------------------
+   Individual Code Lines
+----------------------------------------- */
+
+.case-management-preview .code-line {
+    opacity: 0;
+    transform: translateX(-14px);
+    animation: caseCodeReveal 0.6s ease forwards;
 }
 
-.case-sidebar span:nth-child(4) {
-    width: 80%;
+.case-management-preview .code-line:nth-child(1) {
+    animation-delay: 0.2s;
 }
 
-.case-sidebar .active {
-    width: 78%;
-    background: #10b981;
+.case-management-preview .code-line:nth-child(2) {
+    animation-delay: 0.7s;
 }
 
-/* Main dashboard area */
-
-.case-content {
-    flex: 1;
-    padding: 17px;
+.case-management-preview .code-line:nth-child(3) {
+    animation-delay: 1.2s;
 }
 
-.case-header-line {
-    width: 45%;
-    height: 7px;
-    margin-bottom: 15px;
-    border-radius: 4px;
-    background: #38bdf8;
+.case-management-preview .code-line:nth-child(4) {
+    animation-delay: 1.7s;
 }
 
-/* Stats */
-
-.case-stats {
-    display: flex;
-    gap: 9px;
-    margin-bottom: 15px;
+.case-management-preview .code-line:nth-child(5) {
+    animation-delay: 2.2s;
 }
 
-.case-stats div {
-    flex: 1;
-    height: 27px;
-    border: 1px solid rgba(148, 163, 184, 0.12);
-    border-radius: 5px;
-    background: #122238;
+@keyframes caseCodeReveal {
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
 }
 
-/* Table */
+/* -----------------------------------------
+   Code Colors
+----------------------------------------- */
 
-.case-table {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 7px;
+.case-management-preview .code-keyword {
+    color: #38bdf8;
 }
 
-.case-table span {
-    height: 6px;
-    border-radius: 3px;
-    background: #334155;
+.case-management-preview .code-variable {
+    color: #e2e8f0;
 }
 
-.case-table span:nth-child(2),
-.case-table span:nth-child(6) {
-    background: #10b981;
+.case-management-preview .code-symbol {
+    color: #64748b;
 }
 
-/* Project number
-   Uses the same original project-number positioning */
+.case-management-preview .code-string {
+    color: #10b981;
+}
+
+.case-management-preview .code-function {
+    color: #c084fc;
+}
+
+.case-management-preview .code-property {
+    color: #f59e0b;
+}
+
+/* -----------------------------------------
+   Project Number
+   Same bottom-right position
+----------------------------------------- */
+
 .case-management-preview .project-number {
     position: absolute;
-    bottom: 15px;
     right: 18px;
+    bottom: 15px;
     color: rgba(255, 255, 255, 0.18);
 }
 
-/* Local/Internal status */
+/* -----------------------------------------
+   Project Status
+----------------------------------------- */
 
-.project-status {
+.case-management-preview + .project-info .project-status {
     margin-top: 22px;
     padding-top: 16px;
     border-top: 1px solid rgba(148, 163, 184, 0.12);
 }
 
-.local-project-btn {
+/* -----------------------------------------
+   Local / Internal Badge
+----------------------------------------- */
+
+.case-management-preview + .project-info .local-project-btn {
     display: inline-flex;
     align-items: center;
     padding: 7px 12px;
     border: 1px solid rgba(16, 185, 129, 0.35);
     border-radius: 5px;
-    color: #10b981 !important;
     background: rgba(16, 185, 129, 0.06);
+    color: #10b981 !important;
     font-size: 11px;
     font-weight: 600;
     letter-spacing: 0.3px;
 }
 
-.local-project-btn:hover {
+/* -----------------------------------------
+   Badge Hover
+----------------------------------------- */
+
+.case-management-preview + .project-info .local-project-btn:hover {
     background: rgba(16, 185, 129, 0.10);
     color: #10b981 !important;
+}
+
+/* -----------------------------------------
+   Mobile Responsive
+----------------------------------------- */
+
+@media (max-width: 768px) {
+
+    .case-management-preview .code-preview {
+        width: 94%;
+        font-size: 10px;
+        line-height: 2.2;
+    }
+
+    .case-management-preview .project-number {
+        right: 12px;
+        bottom: 10px;
+    }
+
 }
