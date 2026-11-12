@@ -1335,7 +1335,7 @@ section:not(.hero) h2::after {
 .skill-header {
     display: flex;
 
-    align-items: center;
+    align-items: left;
 
     gap: 16px;
 
