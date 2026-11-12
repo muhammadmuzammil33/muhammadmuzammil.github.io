@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Muhammad Muzammil | Portfolio</title>
-<link rel="icon" type="image/png" href="images/mm-logo.png">
+    <link rel="icon" type="image/png" href="images/mm-logo.png">
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -15,32 +15,29 @@
     <!-- Navigation -->
     <nav>
         
-<a href="#home" class="brand">
-    <img src="images/mm-logo.png" alt="MM Logo">
-    <span>Muhammad Muzammil</span>
-</a>
-        <nav>
+        <a href="#home" class="brand">
+            <img src="images/mm-logo.png" alt="MM Logo">
+            <span>Muhammad Muzammil</span>
+        </a>
 
-    
-    <ul>
-        <li><a href="#home">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#education">Education</a></li>
-        <li><a href="#experience">Experience</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#certifications">Certifications</a><li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#contact">Contact</a></li>
-    </ul>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#certifications">Certifications</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
 
-    <a href="https://www.linkedin.com/in/muhammad-muzammil-111948292/"
-       target="_blank"
-       rel="noopener noreferrer"
-       class="linkedin-btn">
-        <span>in</span> LinkedIn
-    </a>
+        <a href="https://www.linkedin.com/in/muhammad-muzammil-111948292/"
+           target="_blank"
+           rel="noopener noreferrer"
+           class="linkedin-btn">
+            <span>in</span> LinkedIn
+        </a>
 
-</nav>
     </nav>
 
 
@@ -90,9 +87,8 @@
                     Contact Me
                 </a>
 
-                <a href="cv.pdf" download="cv.pdf">Download CV</a>
-                    
-                
+                <!-- UPDATED: Added class="btn secondary" and kept download attribute -->
+                <a href="cv.pdf" download="cv.pdf" class="btn secondary">Download CV</a>
 
             </div>
 
@@ -108,162 +104,69 @@
 
     </section>
 
-
-
+    <!-- ... REST OF YOUR HTML REMAINS EXACTLY THE SAME ... -->
     <!-- About Section -->
     <section id="about">
-
         <h2>About Me</h2>
-
         <div class="about-content">
-
-            <!-- LEFT SIDE -->
             <div class="about-text">
-
                 <p>
                     I am a Software Engineering graduate with a strong interest
                     in SEO, Web Development, and IT Support. I enjoy working with
                     technology and solving technical problems while continuously
                     improving my skills.
                 </p>
-
                 <p>
                     My goal is to build practical digital solutions, optimize
                     websites for search engines, and provide reliable technical
                     support.
                 </p>
-
             </div>
-
 
             <!-- RIGHT SIDE -->
             <div class="about-right">
-
-                <!-- SEO -->
                 <div class="seo-node">
-
                     <div class="seo-ring"></div>
-
-                    <div class="seo-text">
-                        SEO
-                    </div>
-
+                    <div class="seo-text">SEO</div>
                 </div>
-
-
-                <!-- WEB DEVELOPMENT -->
                 <div class="web-node">
-
-                    <div class="web-title">
-                        Web Development
-                    </div>
-
+                    <div class="web-title">Web Development</div>
                     <div class="code-editor">
-
-                        <span class="code-line">
-                            &lt;html&gt;
-                        </span>
-
-                        <span class="code-line">
-                            &lt;div&gt;Web&lt;/div&gt;
-                        </span>
-
-                        <span class="code-line">
-                            CSS + JavaScript
-                        </span>
-
-                        <span class="code-line">
-                            &lt;/html&gt;
-                        </span>
-
+                        <span class="code-line">&lt;html&gt;</span>
+                        <span class="code-line">&lt;div&gt;Web&lt;/div&gt;</span>
+                        <span class="code-line">CSS + JavaScript</span>
+                        <span class="code-line">&lt;/html&gt;</span>
                     </div>
-
                 </div>
-
-
-                <!-- IT SUPPORT -->
                 <div class="it-node">
-
-                    <div class="it-title">
-                        IT Support
-                    </div>
-
+                    <div class="it-title">IT Support</div>
                     <div class="server-box">
-
-                        <div class="server">
-
-                            <div class="server-light"></div>
-
-                            <div class="server-line"></div>
-
-                        </div>
-
-                        <div class="server">
-
-                            <div class="server-light"></div>
-
-                            <div class="server-line"></div>
-
-                        </div>
-
-                        <div class="server">
-
-                            <div class="server-light"></div>
-
-                            <div class="server-line"></div>
-
-                        </div>
-
+                        <div class="server"><div class="server-light"></div><div class="server-line"></div></div>
+                        <div class="server"><div class="server-light"></div><div class="server-line"></div></div>
+                        <div class="server"><div class="server-light"></div><div class="server-line"></div></div>
                     </div>
-
                 </div>
-
             </div>
-
         </div>
-
     </section>
 
 <!-- Education Section -->
 <section id="education">
-
     <h2>My Education Journey</h2>
-
     <p class="section-description">
         My academic journey from secondary education to Software Engineering.
     </p>
-
     <div class="education-timeline">
-
-        <!-- =========================
-             UNIVERSITY
-             ========================= -->
         <div class="education-item">
-
             <div class="education-dot"></div>
-
             <div class="education-card">
-
                 <div class="education-logo">
-                    <img
-                        src="https://quest.edu.pk/static/images/logo/logo-color-detailed.png"
-                        alt="Quaid e Awam University Logo">
+                    <img src="https://quest.edu.pk/static/images/logo/logo-color-detailed.png" alt="Quaid e Awam University Logo">
                 </div>
-
                 <div class="education-content">
-
-                    <span class="education-date">
-                        Dec 2021 – Aug 2025
-                    </span>
-
-                    <h3>
-                        Bachelor of Engineering in Software Engineering
-                    </h3>
-
-                    <h4>
-                        Quaid e Awam University, Nawabshah
-                    </h4>
-
+                    <span class="education-date">Dec 2021 – Aug 2025</span>
+                    <h3>Bachelor of Engineering in Software Engineering</h3>
+                    <h4>Quaid e Awam University, Nawabshah</h4>
                     <p>
                         Completed my Bachelor of Engineering in Software
                         Engineering, developing a strong foundation in
@@ -272,49 +175,25 @@
                         The degree helped me build practical technical and
                         problem-solving skills for the modern IT industry.
                     </p>
-
                     <div class="education-tags">
                         <span>Software Engineering</span>
                         <span>Programming</span>
                         <span>Web Development</span>
                     </div>
-
                 </div>
-
             </div>
-
         </div>
 
-
-        <!-- =========================
-             FSC
-             ========================= -->
         <div class="education-item">
-
             <div class="education-dot"></div>
-
             <div class="education-card">
-
                 <div class="education-logo">
-                    <img
-                        src="https://www.bisesuksindh.edu.pk/assets/SukkurLogo-DTZxPXhR.png"
-                        alt="BISE Sukkur Logo">
+                    <img src="https://www.bisesuksindh.edu.pk/assets/SukkurLogo-DTZxPXhR.png" alt="BISE Sukkur Logo">
                 </div>
-
                 <div class="education-content">
-
-                    <span class="education-date">
-                        2021
-                    </span>
-
-                    <h3>
-                        FSc Pre-Engineering
-                    </h3>
-
-                    <h4>
-                        Board of Intermediate & Secondary Education, Sukkur
-                    </h4>
-
+                    <span class="education-date">2021</span>
+                    <h3>FSc Pre-Engineering</h3>
+                    <h4>Board of Intermediate & Secondary Education, Sukkur</h4>
                     <p>
                         Completed FSc Pre-Engineering with a strong academic
                         foundation in Mathematics, Physics, and Chemistry.
@@ -322,1135 +201,437 @@
                         numerical skills, and interest in engineering and
                         technology.
                     </p>
-
                     <div class="education-tags">
                         <span>Pre-Engineering</span>
                         <span>Mathematics</span>
                         <span>Physics</span>
                     </div>
-
                 </div>
-
             </div>
-
         </div>
 
-
-        <!-- =========================
-             MATRICULATION
-             ========================= -->
         <div class="education-item">
-
             <div class="education-dot"></div>
-
             <div class="education-card">
-
                 <div class="education-logo">
-                    <img
-                        src="https://www.bisesuksindh.edu.pk/assets/SukkurLogo-DTZxPXhR.png"
-                        alt="BISE Sukkur Logo">
+                    <img src="https://www.bisesuksindh.edu.pk/assets/SukkurLogo-DTZxPXhR.png" alt="BISE Sukkur Logo">
                 </div>
-
                 <div class="education-content">
-
-                    <span class="education-date">
-                        2019
-                    </span>
-
-                    <h3>
-                        Matriculation – Science
-                    </h3>
-
-                    <h4>
-                        Board of Intermediate & Secondary Education, Sukkur
-                    </h4>
-
+                    <span class="education-date">2019</span>
+                    <h3>Matriculation – Science</h3>
+                    <h4>Board of Intermediate & Secondary Education, Sukkur</h4>
                     <p>
                         Completed secondary education in the Science group,
                         building a strong foundation in scientific subjects,
                         mathematics, logical thinking, and problem-solving
                         skills that later supported my engineering studies.
                     </p>
-
                     <div class="education-tags">
                         <span>Science</span>
                         <span>Mathematics</span>
                         <span>Computer Studies</span>
                     </div>
-
                 </div>
-
             </div>
-
         </div>
-
     </div>
-
 </section>
+
 <!-- Experience Section -->
 <section id="experience">
-
     <h2>Professional Experience</h2>
-
     <p class="section-description">
         My professional experience and practical exposure across technical
         support, SEO, and IT operations.
     </p>
-
     <div class="experience-container">
-
-        <!-- Experience 1 -->
         <div class="experience-card">
-
-            <div class="experience-icon">
-                🛠️
-            </div>
-
-            
-            <h3>
-                Technical Support Engineer
-            </h3>
-
-            <h4>
-                Sybrid Pvt. Ltd.
-            </h4>
-
-            <p class="company-location">
-                Lackson Group Company · Saddar, Karachi
-            </p>
-
+            <div class="experience-icon">🛠️</div>
+            <h3>Technical Support Engineer</h3>
+            <h4>Sybrid Pvt. Ltd.</h4>
+            <p class="company-location">Lackson Group Company · Saddar, Karachi</p>
             <p class="experience-description">
                 Provided technical support and troubleshooting assistance
                 for computer systems, networking, software, and user-related
                 technical issues. Worked on diagnosing problems and helping
                 maintain smooth day-to-day technical operations.
             </p>
-
             <div class="experience-tags">
                 <span>IT Support</span>
                 <span>Networking</span>
                 <span>Troubleshooting</span>
             </div>
-
         </div>
 
-
-        <!-- Experience 2 -->
         <div class="experience-card">
-
-            <div class="experience-icon">
-                📈
-            </div>
-
-            
-
-            <h3>
-                SEO Executive
-            </h3>
-
-            <h4>
-                Synergy Tele Services Pvt. Ltd.
-            </h4>
-
-            <p class="company-location">
-                Shahra-e-Faisal, Karachi
-            </p>
-
+            <div class="experience-icon">📈</div>
+            <h3>SEO Executive</h3>
+            <h4>Synergy Tele Services Pvt. Ltd.</h4>
+            <p class="company-location">Shahra-e-Faisal, Karachi</p>
             <p class="experience-description">
                 Worked on search engine optimization activities including
                 website optimization, keyword research, content-related
                 improvements, and strategies focused on improving online
                 visibility and organic search performance.
             </p>
-
             <div class="experience-tags">
                 <span>SEO</span>
                 <span>Keyword Research</span>
                 <span>On-Page SEO</span>
             </div>
-
         </div>
 
-
-        <!-- Experience 3 -->
         <div class="experience-card">
-
-            <div class="experience-icon">
-                💻
-            </div>
-
-            
-
-            <h3>
-                IT Support Executive
-            </h3>
-
-            <h4>
-                Logic Loop
-            </h4>
-
-            <p class="company-location">
-                Fortune Tower, Shahra-e-Faisal, Karachi
-            </p>
-
+            <div class="experience-icon">💻</div>
+            <h3>IT Support Executive</h3>
+            <h4>Logic Loop</h4>
+            <p class="company-location">Fortune Tower, Shahra-e-Faisal, Karachi</p>
             <p class="experience-description">
                 Provided IT support for users and computer systems, assisting
                 with technical troubleshooting, hardware and software issues,
                 networking, and maintaining reliable day-to-day IT operations.
             </p>
-
             <div class="experience-tags">
                 <span>IT Support</span>
                 <span>Hardware</span>
                 <span>Networking</span>
             </div>
-
         </div>
-<div class="experience-card pmd-experience-card">
-    <h3>Software Engineering Intern</h3>
-    <h4>Pakistan Meteorological Department</h4>
-    <p class="experience-location">Karachi, Pakistan</p>
 
-    <p class="experience-description">
-        Worked as a Software Engineering Intern, gaining practical exposure
-        to software engineering and technical work in a professional environment.
-    </p>
-</div>
+        <div class="experience-card pmd-experience-card">
+            <h3>Software Engineering Intern</h3>
+            <h4>Pakistan Meteorological Department</h4>
+            <p class="experience-location">Karachi, Pakistan</p>
+            <p class="experience-description">
+                Worked as a Software Engineering Intern, gaining practical exposure
+                to software engineering and technical work in a professional environment.
+            </p>
+        </div>
     </div>
-
 </section>
 
-    <!-- Skills Section -->
-    <!-- ============================
-     SKILLS SECTION
-     ============================ -->
-
+<!-- Skills Section -->
 <section id="skills">
-
     <div class="skills-overlay"></div>
-
     <div class="skills-content">
-
         <h2>My Skills</h2>
-
         <p class="section-description">
             A combination of technical skills, development expertise,
             SEO knowledge, and IT support experience.
         </p>
-
         <div class="skills-container">
-
-            <!-- =========================
-                 SEO
-                 ========================= -->
-
             <div class="skill-box seo-box">
-
                 <div class="skill-header">
                     <div class="skill-main-icon">🔍</div>
-
                     <div>
                         <h3>SEO</h3>
                         <p>Search Engine Optimization</p>
                     </div>
                 </div>
-
                 <h4>Core Skills</h4>
-
                 <div class="skill-list">
-
-                    <div class="skill-item">
-                        <span class="skill-icon">📄</span>
-                        <span>On-Page SEO</span>
-                    </div>
-
-                    <div class="skill-item">
-                        <span class="skill-icon">🔗</span>
-                        <span>Off-Page SEO</span>
-                    </div>
-
-                    <div class="skill-item">
-                        <span class="skill-icon">⚙️</span>
-                        <span>Technical SEO</span>
-                    </div>
-
-                    <div class="skill-item">
-                        <span class="skill-icon">📝</span>
-                        <span>Content Publishing</span>
-                    </div>
-
+                    <div class="skill-item"><span class="skill-icon">📄</span><span>On-Page SEO</span></div>
+                    <div class="skill-item"><span class="skill-icon">🔗</span><span>Off-Page SEO</span></div>
+                    <div class="skill-item"><span class="skill-icon">⚙️</span><span>Technical SEO</span></div>
+                    <div class="skill-item"><span class="skill-icon">📝</span><span>Content Publishing</span></div>
                 </div>
-
                 <h4>Tools</h4>
-
                 <div class="skill-tools">
-
-                    <span>Semrush</span>
-                    <span>Ahrefs</span>
-                    <span>Keyword Planner</span>
-                    <span>Okara</span>
-
+                    <span>Semrush</span><span>Ahrefs</span><span>Keyword Planner</span><span>Okara</span>
                 </div>
-
             </div>
 
-
-            <!-- =========================
-                 WEB DEVELOPMENT
-                 ========================= -->
-
             <div class="skill-box web-box">
-
                 <div class="skill-header">
                     <div class="skill-main-icon">💻</div>
-
                     <div>
                         <h3>Web Development</h3>
                         <p>Frontend & Web Technologies</p>
                     </div>
                 </div>
-
                 <h4>Skills</h4>
-
                 <div class="skill-list">
-
-                    <div class="skill-item">
-                        <span class="skill-icon">🌐</span>
-                        <span>HTML</span>
-                    </div>
-
-                    <div class="skill-item">
-                        <span class="skill-icon">🎨</span>
-                        <span>CSS</span>
-                    </div>
-
-                    <div class="skill-item">
-                        <span class="skill-icon">JS</span>
-                        <span>JavaScript</span>
-                    </div>
-
-                    <div class="skill-item">
-                        <span class="skill-icon">⚛️</span>
-                        <span>React</span>
-                    </div>
-
-                    <div class="skill-item">
-                        <span class="skill-icon">W</span>
-                        <span>WordPress</span>
-                    </div>
-
+                    <div class="skill-item"><span class="skill-icon">🌐</span><span>HTML</span></div>
+                    <div class="skill-item"><span class="skill-icon">🎨</span><span>CSS</span></div>
+                    <div class="skill-item"><span class="skill-icon">JS</span><span>JavaScript</span></div>
+                    <div class="skill-item"><span class="skill-icon">⚛️</span><span>React</span></div>
+                    <div class="skill-item"><span class="skill-icon">W</span><span>WordPress</span></div>
                 </div>
-
                 <h4>Tools</h4>
-
                 <div class="skill-tools">
-
-                    <span>VS Code</span>
-                    <span>GitHub</span>
-                    <span>WordPress</span>
-
+                    <span>VS Code</span><span>GitHub</span><span>WordPress</span>
                 </div>
-
             </div>
 
-
-            <!-- =========================
-                 IT SUPPORT
-                 ========================= -->
-
             <div class="skill-box it-box">
-
                 <div class="skill-header">
                     <div class="skill-main-icon">🛠️</div>
-
                     <div>
                         <h3>IT Support</h3>
                         <p>Technical Support & IT Operations</p>
                     </div>
                 </div>
-
                 <h4>Skills</h4>
-
                 <div class="skill-list">
-
-                    <div class="skill-item">
-                        <span class="skill-icon">🖥️</span>
-                        <span>IT Support</span>
-                    </div>
-
-                    <div class="skill-item">
-                        <span class="skill-icon">🔧</span>
-                        <span>Technical Support</span>
-                    </div>
-
-                    <div class="skill-item">
-                        <span class="skill-icon">🌐</span>
-                        <span>Networking</span>
-                    </div>
-
-                    <div class="skill-item">
-                        <span class="skill-icon">☁️</span>
-                        <span>Cloud Computing</span>
-                    </div>
-
-                    <div class="skill-item">
-                        <span class="skill-icon">🤖</span>
-                        <span>Artificial Intelligence</span>
-                    </div>
-
+                    <div class="skill-item"><span class="skill-icon">🖥️</span><span>IT Support</span></div>
+                    <div class="skill-item"><span class="skill-icon">🔧</span><span>Technical Support</span></div>
+                    <div class="skill-item"><span class="skill-icon">🌐</span><span>Networking</span></div>
+                    <div class="skill-item"><span class="skill-icon">☁️</span><span>Cloud Computing</span></div>
+                    <div class="skill-item"><span class="skill-icon">🤖</span><span>Artificial Intelligence</span></div>
                 </div>
-
                 <h4>Tools & Technologies</h4>
-
                 <div class="skill-tools">
-
-                    <span>MS 365</span>
-                    <span>MS Office</span>
-                    <span>Wireshark</span>
-                    <span>IPConfig</span>
-                    <span>Cisco Packet Tracer</span>
-                    <span>AnyDesk</span>
-                    <span>Switch</span>
-                    <span>Router</span>
-
+                    <span>MS 365</span><span>MS Office</span><span>Wireshark</span><span>IPConfig</span><span>Cisco Packet Tracer</span><span>AnyDesk</span><span>Switch</span><span>Router</span>
                 </div>
-
             </div>
-
         </div>
-
     </div>
-
 </section>
 
-
-<!-- ================= CERTIFICATIONS ================= -->
-
+<!-- Certifications -->
 <section id="certifications" class="certifications-section">
-
     <div class="certifications-title">
         <h2>Certifications</h2>
-        <p>
-            Professional certifications and courses that support my
-            technical, development, cybersecurity, AI and IT skills.
-        </p>
+        <p>Professional certifications and courses that support my technical, development, cybersecurity, AI and IT skills.</p>
     </div>
-
-
     <div class="certifications-grid">
-
-
-        <!-- CERTIFICATE 1 -->
-
         <div class="certificate-card">
-
-            <div class="certificate-icon">
-                🏆
-            </div>
-
+            <div class="certificate-icon">🏆</div>
             <div class="certificate-content">
-
-                <span class="certificate-label">
-                    IT SUPPORT
-                </span>
-
+                <span class="certificate-label">IT SUPPORT</span>
                 <h3>Google IT Support Professional Certificate</h3>
-
-                <p>
-                    Professional training covering technical support,
-                    networking, operating systems and troubleshooting.
-                </p>
-
-                <a href="./Certificates/google-it-support.pdf" target="_blank" class="certificate-btn">
-    View Certificate ↗
-</a>
-
+                <p>Professional training covering technical support, networking, operating systems and troubleshooting.</p>
+                <a href="./Certificates/google-it-support.pdf" target="_blank" class="certificate-btn">View Certificate ↗</a>
             </div>
-
         </div>
-
-
-        <!-- CERTIFICATE 2 -->
-
         <div class="certificate-card">
-
-            <div class="certificate-icon">
-                🤖
-            </div>
-
+            <div class="certificate-icon">🤖</div>
             <div class="certificate-content">
-
-                <span class="certificate-label">
-                    ARTIFICIAL INTELLIGENCE
-                </span>
-
+                <span class="certificate-label">ARTIFICIAL INTELLIGENCE</span>
                 <h3>Google AI Essentials</h3>
-
-                <p>
-                    Training focused on the fundamentals and practical
-                    applications of artificial intelligence.
-                </p>
-
-                <a href="./Certificates/google-ai-essentials.pdf" target="_blank" class="certificate-btn">
-    View Certificate ↗
-</a>
-
+                <p>Training focused on the fundamentals and practical applications of artificial intelligence.</p>
+                <a href="./Certificates/google-ai-essentials.pdf" target="_blank" class="certificate-btn">View Certificate ↗</a>
             </div>
-
         </div>
-
-
-        <!-- CERTIFICATE 3 -->
-
         <div class="certificate-card">
-
-            <div class="certificate-icon">
-                🌐
-            </div>
-
+            <div class="certificate-icon">🌐</div>
             <div class="certificate-content">
-
-                <span class="certificate-label">
-                    NETWORKING
-                </span>
-
+                <span class="certificate-label">NETWORKING</span>
                 <h3>Networking &amp; Cloud Computing</h3>
-
-                <p>
-                    Training covering networking concepts and
-                    cloud computing fundamentals.
-                </p>
-
-                <a href="./Certificates/networking-cloud-computing.pdf" target="_blank" class="certificate-btn">
-    View Certificate ↗
-</a>
-
+                <p>Training covering networking concepts and cloud computing fundamentals.</p>
+                <a href="./Certificates/networking-cloud-computing.pdf" target="_blank" class="certificate-btn">View Certificate ↗</a>
             </div>
-
         </div>
-
-
-        <!-- CERTIFICATE 4 -->
-
         <div class="certificate-card">
-
-            <div class="certificate-icon">
-                💻
-            </div>
-
+            <div class="certificate-icon">💻</div>
             <div class="certificate-content">
-
-                <span class="certificate-label">
-                    WEB DEVELOPMENT
-                </span>
-
+                <span class="certificate-label">WEB DEVELOPMENT</span>
                 <h3>Web Development</h3>
-
-                <p>
-                    Training focused on web development concepts,
-                    technologies and practical development skills.
-                </p>
-
-                <a href="./Certificates/web-development.pdf" target="_blank" class="certificate-btn">
-    View Certificate ↗
-</a>
-
+                <p>Training focused on web development concepts, technologies and practical development skills.</p>
+                <a href="./Certificates/web-development.pdf" target="_blank" class="certificate-btn">View Certificate ↗</a>
             </div>
-
         </div>
-
-
-        <!-- CERTIFICATE 5 -->
-
         <div class="certificate-card">
-
-            <div class="certificate-icon">
-                🐍
-            </div>
-
+            <div class="certificate-icon">🐍</div>
             <div class="certificate-content">
-
-                <span class="certificate-label">
-                    PYTHON &amp; DATA SCIENCE
-                </span>
-
+                <span class="certificate-label">PYTHON &amp; DATA SCIENCE</span>
                 <h3>Python For Data Science, AI &amp; Development</h3>
-
-                <p>
-                    Training covering Python programming, data science,
-                    artificial intelligence and development fundamentals.
-                </p>
-
-                <a href="./Certificates/python-data-science-ai-development.pdf" target="_blank" class="certificate-btn">
-    View Certificate ↗
-</a>
-
+                <p>Training covering Python programming, data science, artificial intelligence and development fundamentals.</p>
+                <a href="./Certificates/python-data-science-ai-development.pdf" target="_blank" class="certificate-btn">View Certificate ↗</a>
             </div>
-
         </div>
-
-
-        <!-- CERTIFICATE 6 -->
-
         <div class="certificate-card">
-
-            <div class="certificate-icon">
-                🔐
-            </div>
-
+            <div class="certificate-icon">🔐</div>
             <div class="certificate-content">
-
-                <span class="certificate-label">
-                    CYBERSECURITY
-                </span>
-
+                <span class="certificate-label">CYBERSECURITY</span>
                 <h3>Foundations of Cybersecurity</h3>
-
-                <p>
-                    Foundational cybersecurity training covering
-                    security concepts, threats and protection principles.
-                </p>
-
-                <a href="./Certificates/foundations-cybersecurity.pdf" target="_blank" class="certificate-btn">
-    View Certificate ↗
-</a>
-
+                <p>Foundational cybersecurity training covering security concepts, threats and protection principles.</p>
+                <a href="./Certificates/foundations-cybersecurity.pdf" target="_blank" class="certificate-btn">View Certificate ↗</a>
             </div>
-
         </div>
-
-
-        <!-- CERTIFICATE 7 -->
-
         <div class="certificate-card">
-
-            <div class="certificate-icon">
-                🎨
-            </div>
-
+            <div class="certificate-icon">🎨</div>
             <div class="certificate-content">
-
-                <span class="certificate-label">
-                    UX DESIGN
-                </span>
-
+                <span class="certificate-label">UX DESIGN</span>
                 <h3>Foundations of UX Design</h3>
-
-                <p>
-                    Training focused on user experience design principles,
-                    research and design fundamentals.
-                </p>
-
-                <a href="./Certificates/foundations-ux-design.pdf" target="_blank" class="certificate-btn">
-    View Certificate ↗
-</a>
-
+                <p>Training focused on user experience design principles, research and design fundamentals.</p>
+                <a href="./Certificates/foundations-ux-design.pdf" target="_blank" class="certificate-btn">View Certificate ↗</a>
             </div>
-
         </div>
-
-
     </div>
-
 </section>
+
+<!-- Projects Container -->
 <section id="projects">
 <h2>My Projects</h2>
-    <!-- ============================
-     SEO PROJECTS
-     ============================ -->
 
+<!-- SEO Projects -->
 <section id="seo-projects">
-
     <div class="seo-projects-bg"></div>
-
     <div class="seo-projects-content">
-
         <h2 class="seo-projects-title">SEO</h2>
-
         <p class="section-description">
             SEO projects focused on improving website visibility,
             search performance, content structure, and organic growth.
         </p>
-
-
         <div class="seo-projects-grid">
-
-
-            <!-- PROJECT 1 -->
-
             <article class="seo-project-card">
-
                 <div class="seo-project-image">
-
-                    <img
-                        src="images/seo-jacket-hub.jpg"
-                        alt="Jacket Hub SEO Project"
-                    >
-
-                    <div class="seo-project-overlay">
-
-                        <span>SEO PROJECT</span>
-
-                    </div>
-
+                    <img src="images/seo-jacket-hub.jpg" alt="Jacket Hub SEO Project">
+                    <div class="seo-project-overlay"><span>SEO PROJECT</span></div>
                 </div>
-
-
                 <div class="seo-project-content">
-
-                    <div class="seo-project-category">
-                        E-Commerce SEO
-                    </div>
-
+                    <div class="seo-project-category">E-Commerce SEO</div>
                     <h3>Jacket Hub</h3>
-
-                    <p>
-                        SEO work for an e-commerce website focused on
-                        men's and women's jackets, including leather,
-                        shearling, motorcycle, bomber and other jacket
-                        categories.
-                    </p>
-
-
-                    <div class="seo-project-tags">
-
-                        <span>On-Page SEO</span>
-                        <span>Technical SEO</span>
-                        <span>Content</span>
-
-                    </div>
-
-
-                    <a
-                        href="https://www.jacket-hub.com/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        class="seo-project-btn"
-                    >
-                        Visit Website
-                        <span>↗</span>
-                    </a>
-
+                    <p>SEO work for an e-commerce website focused on men's and women's jackets, including leather, shearling, motorcycle, bomber and other jacket categories.</p>
+                    <div class="seo-project-tags"><span>On-Page SEO</span><span>Technical SEO</span><span>Content</span></div>
+                    <a href="https://www.jacket-hub.com/" target="_blank" rel="noopener noreferrer" class="seo-project-btn">Visit Website <span>↗</span></a>
                 </div>
-
             </article>
-
-
-            <!-- PROJECT 2 -->
-
             <article class="seo-project-card">
-
                 <div class="seo-project-image">
-
-                    <img
-                        src="images/seo-hit-jacket.jpg"
-                        alt="Hit Jacket SEO Project"
-                    >
-
-                    <div class="seo-project-overlay">
-
-                        <span>SEO PROJECT</span>
-
-                    </div>
-
+                    <img src="images/seo-hit-jacket.jpg" alt="Hit Jacket SEO Project">
+                    <div class="seo-project-overlay"><span>SEO PROJECT</span></div>
                 </div>
-
-
                 <div class="seo-project-content">
-
-                    <div class="seo-project-category">
-                        E-Commerce SEO
-                    </div>
-
+                    <div class="seo-project-category">E-Commerce SEO</div>
                     <h3>Hit Jacket</h3>
-
-                    <p>
-                        SEO work for a fashion e-commerce website
-                        offering men's and women's jackets, coats,
-                        hoodies, t-shirts and related fashion products.
-                    </p>
-
-
-                    <div class="seo-project-tags">
-
-                        <span>On-Page SEO</span>
-                        <span>Keyword Research</span>
-                        <span>Content</span>
-
-                    </div>
-
-
-                    <a
-                        href="https://www.hitjacket.com/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        class="seo-project-btn"
-                    >
-                        Visit Website
-                        <span>↗</span>
-                    </a>
-
+                    <p>SEO work for a fashion e-commerce website offering men's and women's jackets, coats, hoodies, t-shirts and related fashion products.</p>
+                    <div class="seo-project-tags"><span>On-Page SEO</span><span>Keyword Research</span><span>Content</span></div>
+                    <a href="https://www.hitjacket.com/" target="_blank" rel="noopener noreferrer" class="seo-project-btn">Visit Website <span>↗</span></a>
                 </div>
-
             </article>
-
-
-            <!-- PROJECT 3 -->
-
             <article class="seo-project-card">
-
                 <div class="seo-project-image">
-
-                    <img
-                        src="images/seo-bretels.jpg"
-                        alt="Bretels.nl SEO Project"
-                    >
-
-                    <div class="seo-project-overlay">
-
-                        <span>SEO PROJECT</span>
-
-                    </div>
-
+                    <img src="images/seo-bretels.jpg" alt="Bretels.nl SEO Project">
+                    <div class="seo-project-overlay"><span>SEO PROJECT</span></div>
                 </div>
-
-
                 <div class="seo-project-content">
-
-                    <div class="seo-project-category">
-                        E-Commerce SEO
-                    </div>
-
+                    <div class="seo-project-category">E-Commerce SEO</div>
                     <h3>Bretels.nl</h3>
-
-                    <p>
-                        SEO work for a Dutch e-commerce website focused
-                        on suspenders, bow ties and fashion accessories,
-                        with structured product and category pages.
-                    </p>
-
-
-                    <div class="seo-project-tags">
-
-                        <span>Technical SEO</span>
-                        <span>On-Page SEO</span>
-                        <span>Content</span>
-
-                    </div>
-
-
-                    <a
-                        href="https://bretels.nl/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        class="seo-project-btn"
-                    >
-                        Visit Website
-                        <span>↗</span>
-                    </a>
-
+                    <p>SEO work for a Dutch e-commerce website focused on suspenders, bow ties and fashion accessories, with structured product and category pages.</p>
+                    <div class="seo-project-tags"><span>Technical SEO</span><span>On-Page SEO</span><span>Content</span></div>
+                    <a href="https://bretels.nl/" target="_blank" rel="noopener noreferrer" class="seo-project-btn">Visit Website <span>↗</span></a>
                 </div>
-
             </article>
-
-
-            <!-- PROJECT 4 -->
-
             <article class="seo-project-card">
-
                 <div class="seo-project-image">
-
-                    <img
-                        src="images/seo-master-assignment.jpg"
-                        alt="Master Assignment Writer SEO Project"
-                    >
-
-                    <div class="seo-project-overlay">
-
-                        <span>SEO PROJECT</span>
-
-                    </div>
-
+                    <img src="images/seo-master-assignment.jpg" alt="Master Assignment Writer SEO Project">
+                    <div class="seo-project-overlay"><span>SEO PROJECT</span></div>
                 </div>
-
-
                 <div class="seo-project-content">
-
-                    <div class="seo-project-category">
-                        SEO & Content
-                    </div>
-
+                    <div class="seo-project-category">SEO & Content</div>
                     <h3>Master Assignment Writer</h3>
-
-                    <p>
-                        SEO work for a UK-focused website with
-                        academic-related service pages, subject pages,
-                        location pages and supporting content.
-                    </p>
-
-
-                    <div class="seo-project-tags">
-
-                        <span>On-Page SEO</span>
-                        <span>Keyword Research</span>
-                        <span>Content SEO</span>
-
-                    </div>
-
-
-                    <a
-                        href="https://masterassignmentwriter.com/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        class="seo-project-btn"
-                    >
-                        Visit Website
-                        <span>↗</span>
-                    </a>
-
+                    <p>SEO work for a UK-focused website with academic-related service pages, subject pages, location pages and supporting content.</p>
+                    <div class="seo-project-tags"><span>On-Page SEO</span><span>Keyword Research</span><span>Content SEO</span></div>
+                    <a href="https://masterassignmentwriter.com/" target="_blank" rel="noopener noreferrer" class="seo-project-btn">Visit Website <span>↗</span></a>
                 </div>
-
             </article>
-
-
         </div>
-
     </div>
-
 </section>
-<!-- ================= WEB DEVELOPMENT PROJECTS ================= -->
 
-<!-- ================= WEB DEVELOPMENT PROJECTS ================= -->
-
+<!-- Web Development Projects -->
 <section id="web-projects" class="web-projects-section">
-
     <div class="section-title">
         <h2>Web Development</h2>
         <p>Web applications and development projects built with modern technologies.</p>
     </div>
-
     <div class="web-projects-grid">
-<!-- Project 03 - Ghotki Case Management System -->
-<!-- Project 03 - Ghotki Case Management System -->
-<div class="project-card">
-
-    <div class="project-preview case-management-preview">
-        <img src="images/ghotki-case-management.jpg"
-             alt="Ghotki Case Management System Dashboard">
-
-        <div class="project-number">03</div>
-    </div>
-
-    <div class="project-info">
-        <span class="project-category">WEB DEVELOPMENT</span>
-
-        <h3>Ghotki Case Management System</h3>
-
-        <p>
-            A local case management system developed for the
-            Regional Office Ghotki to manage cases, agencies,
-            proceedings, status updates, and case records.
-        </p>
-
-        <div class="project-tags">
-            <span>PHP</span>
-            <span>MySQL</span>
-            <span>JavaScript</span>
-            <span>HTML/CSS</span>
-            <span>XAMPP</span>
-        </div>
-
-        <div class="project-status">
-            <span class="local-project-btn">LOCAL / INTERNAL PROJECT</span>
-        </div>
-    </div>
-
-</div>
-
-        <!-- URL SHORTENER -->
-        <div class="web-project-card">
-
-            <div class="project-preview">
-                <div class="browser-bar">
-                    <span></span>
-                    <span></span>
-                    <span></span>
+        <div class="project-card">
+            <div class="project-preview case-management-preview">
+                <img src="images/ghotki-case-management.jpg" alt="Ghotki Case Management System Dashboard">
+                <div class="project-number">03</div>
+            </div>
+            <div class="project-info">
+                <span class="project-category">WEB DEVELOPMENT</span>
+                <h3>Ghotki Case Management System</h3>
+                <p>A local case management system developed for the Regional Office Ghotki to manage cases, agencies, proceedings, status updates, and case records.</p>
+                <div class="project-tags">
+                    <span>PHP</span><span>MySQL</span><span>JavaScript</span><span>HTML/CSS</span><span>XAMPP</span>
                 </div>
-
-                <div class="code-preview">
-                    <span class="code-blue">const</span>
-                    <span class="code-purple">shortUrl</span>
-                    =
-                    <span class="code-green">generateShortUrl()</span><br>
-
-                    <span class="code-blue">app</span>.<span class="code-yellow">get</span>(
-                    <span class="code-orange">"/url"</span>
-                    )<br>
-
-                    <span class="code-blue">return</span>
-                    <span class="code-green">shortUrl</span>;
-                </div>
-
-                <div class="preview-label">
-                    &lt;/&gt; URL SHORTENER
+                <div class="project-status">
+                    <span class="local-project-btn">LOCAL / INTERNAL PROJECT</span>
                 </div>
             </div>
+        </div>
 
+        <div class="web-project-card">
+            <div class="project-preview">
+                <div class="browser-bar"><span></span><span></span><span></span></div>
+                <div class="code-preview">
+                    <span class="code-blue">const</span> <span class="code-purple">shortUrl</span> = <span class="code-green">generateShortUrl()</span><br>
+                    <span class="code-blue">app</span>.<span class="code-yellow">get</span>(<span class="code-orange">"/url"</span>)<br>
+                    <span class="code-blue">return</span> <span class="code-green">shortUrl</span>;
+                </div>
+                <div class="preview-label">&lt;/&gt; URL SHORTENER</div>
+            </div>
             <div class="web-project-content">
-
                 <div class="project-top">
                     <span class="project-category">WEB DEVELOPMENT</span>
                     <span class="project-number">01</span>
                 </div>
-
                 <h3>URL Shortener</h3>
-
-                <p>
-                    A web-based application for converting long URLs
-                    into shorter and easier-to-share links.
-                </p>
-
-                <div class="tech-stack">
-                    <span>Node.js</span>
-                    <span>Express</span>
-                    <span>EJS</span>
-                    <span>JavaScript</span>
-                </div>
-
-                <a href="https://github.com/muhammadmuzammil33/UrlShortener"
-                   target="_blank"
-                   rel="noopener noreferrer"
-                   class="github-project-btn">
-                    View Project Code 
-                    <span>↗</span>
-                </a>
-
+                <p>A web-based application for converting long URLs into shorter and easier-to-share links.</p>
+                <div class="tech-stack"><span>Node.js</span><span>Express</span><span>EJS</span><span>JavaScript</span></div>
+                <a href="https://github.com/muhammadmuzammil33/UrlShortener" target="_blank" rel="noopener noreferrer" class="github-project-btn">View Project Code <span>↗</span></a>
             </div>
-
         </div>
 
-
-        <!-- REAL TIME TRACKER -->
         <div class="web-project-card">
-
             <div class="project-preview">
-
-                <div class="browser-bar">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
-
+                <div class="browser-bar"><span></span><span></span><span></span></div>
                 <div class="tracker-preview">
-
                     <div class="map-grid"></div>
-
                     <div class="location-pin pin-one">●</div>
                     <div class="location-pin pin-two">●</div>
                     <div class="location-pin pin-three">●</div>
-
-                    <div class="tracker-status">
-                        ● LIVE TRACKING
-                    </div>
-
+                    <div class="tracker-status">● LIVE TRACKING</div>
                 </div>
-
-                <div class="preview-label">
-                    ⚡ REAL-TIME TRACKER
-                </div>
-
+                <div class="preview-label">⚡ REAL-TIME TRACKER</div>
             </div>
-
             <div class="web-project-content">
-
                 <div class="project-top">
                     <span class="project-category">WEB DEVELOPMENT</span>
                     <span class="project-number">02</span>
                 </div>
-
                 <h3>Real-Time Tracker App</h3>
-
-                <p>
-                    A real-time web application designed to exchange
-                    live location data between connected users.
-                </p>
-
-                <div class="tech-stack">
-                    <span>Node.js</span>
-                    <span>Express</span>
-                    <span>Socket.IO</span>
-                    <span>EJS</span>
-                </div>
-
-                <a href="https://github.com/muhammadmuzammil33/Real-Time-Tracker-App"
-                   target="_blank"
-                   rel="noopener noreferrer"
-                   class="github-project-btn">
-                    View Project Code
-                    <span>↗</span>
-                </a>
-
+                <p>A real-time web application designed to exchange live location data between connected users.</p>
+                <div class="tech-stack"><span>Node.js</span><span>Express</span><span>Socket.IO</span><span>EJS</span></div>
+                <a href="https://github.com/muhammadmuzammil33/Real-Time-Tracker-App" target="_blank" rel="noopener noreferrer" class="github-project-btn">View Project Code <span>↗</span></a>
             </div>
-
         </div>
-
     </div>
-
 </section>
 </section>
 
     <!-- Contact Section -->
     <section id="contact">
-
         <h2>Let's Work Together</h2>
-
         <p class="contact-intro">
             Have a project, job opportunity or collaboration in mind?
             Feel free to get in touch with me.
         </p>
-
         <div class="contact-links">
-
-            <a href="mailto:dm4221863@gmail.com">
-                📧 Email Me
-            </a>
-
-            <a href="https://www.linkedin.com/in/muhammad-muzammil-111948292/"
-               target="_blank">
-                💼 LinkedIn
-            </a>
-
-            <a href="https://wa.me/923170371757"
-               target="_blank">
-                📱 WhatsApp
-            </a>
-
+            <a href="mailto:dm4221863@gmail.com">📧 Email Me</a>
+            <a href="https://www.linkedin.com/in/muhammad-muzammil-111948292/" target="_blank">💼 LinkedIn</a>
+            <a href="https://wa.me/923170371757" target="_blank">📱 WhatsApp</a>
         </div>
-
     </section>
-
-
 
     <!-- Footer -->
     <footer>
-
         <p>
             © <span id="year"></span> Muhammad Muzammil.
             All Rights Reserved.
         </p>
-
     </footer>
 
-
     <!-- Back To Top -->
-    <button id="back-to-top" title="Go to top">
-        ↑
-    </button>
-
+    <button id="back-to-top" title="Go to top">↑</button>
 
     <!-- JavaScript -->
     <script src="script.js"></script>
 
 </body>
-
 </html>
