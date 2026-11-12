@@ -88,3 +88,181 @@ backToTop.addEventListener("click", function () {
     });
 
 });
+
+
+// ============================
+// Certificates + Projects Card Reveal
+// ============================
+
+document.documentElement.classList.add("reveal-ready");
+
+const revealGroups = [
+
+    document.querySelectorAll(
+        "#certifications .certificate-card"
+    ),
+
+    document.querySelectorAll(
+        "#seo-projects .seo-project-card"
+    ),
+
+    document.querySelectorAll(
+        "#web-projects .project-card, #web-projects .web-project-card"
+    )
+];
+
+const revealCards = [];
+
+revealGroups.forEach(function (group) {
+
+    group.forEach(function (card, index) {
+
+        card.style.setProperty(
+            "--reveal-delay",
+            Math.min(index * 0.09, 0.36) + "s"
+        );
+
+        revealCards.push(card);
+    });
+});
+
+const reduceMotion = window.matchMedia(
+    "(prefers-reduced-motion: reduce)"
+).matches;
+
+function revealCardsInView() {
+
+    const triggerPoint = window.innerHeight * 0.9;
+
+    revealCards.forEach(function (card) {
+
+        if (card.classList.contains("is-visible")) {
+            return;
+        }
+
+        const rect = card.getBoundingClientRect();
+
+        if (rect.top < triggerPoint && rect.bottom > 0) {
+
+            card.classList.add("is-visible");
+        }
+    });
+}
+
+if (reduceMotion) {
+
+    revealCards.forEach(function (card) {
+
+        card.classList.add("is-visible");
+    });
+
+} else {
+
+    let lastRevealCheck = 0;
+
+    function requestRevealCheck() {
+
+        const now = Date.now();
+
+        if (now - lastRevealCheck < 80) {
+            return;
+        }
+
+        lastRevealCheck = now;
+
+        revealCardsInView();
+
+        window.setTimeout(revealCardsInView, 350);
+    }
+
+    window.addEventListener("scroll", requestRevealCheck, {
+        passive: true
+    });
+
+    window.addEventListener("resize", requestRevealCheck);
+
+    window.addEventListener("load", revealCardsInView);
+
+    revealCardsInView();
+}
+
+
+// ============================
+// TaskFlow Dashboard Preview
+// ============================
+
+(function () {
+
+    const previewDialog = document.getElementById(
+        "taskflowPreview"
+    );
+
+    const previewTriggers = document.querySelectorAll(
+        ".js-taskflow-preview"
+    );
+
+    if (!previewDialog || !previewTriggers.length) {
+        return;
+    }
+
+    const closeButton = previewDialog.querySelector(
+        ".js-lightbox-close"
+    );
+
+    let lastTrigger = null;
+
+    function openPreview(event) {
+
+        lastTrigger = event.currentTarget;
+
+        if (typeof previewDialog.showModal === "function") {
+            previewDialog.showModal();
+        } else {
+            previewDialog.setAttribute("open", "");
+        }
+
+        document.body.classList.add("lightbox-open");
+
+        if (closeButton) {
+            closeButton.focus({ preventScroll: true });
+        }
+    }
+
+    function closePreview() {
+
+        if (typeof previewDialog.close === "function") {
+            previewDialog.close();
+        } else {
+            previewDialog.removeAttribute("open");
+        }
+
+        document.body.classList.remove("lightbox-open");
+
+        if (lastTrigger) {
+            lastTrigger.focus({ preventScroll: true });
+        }
+    }
+
+    previewTriggers.forEach(function (trigger) {
+
+        trigger.addEventListener("click", openPreview);
+    });
+
+    if (closeButton) {
+        closeButton.addEventListener("click", closePreview);
+    }
+
+    previewDialog.addEventListener("click", function (event) {
+
+        if (event.target === previewDialog) {
+            closePreview();
+        }
+    });
+
+    previewDialog.addEventListener("cancel", function (event) {
+
+        event.preventDefault();
+
+        closePreview();
+    });
+})();

@@ -1230,6 +1230,75 @@
     </div>
 
     <div class="web-projects-grid">
+<!-- Project 04 - TaskFlow -->
+<div class="project-card taskflow-card">
+
+    <div class="project-preview case-management-preview taskflow-preview">
+        <img src="images/taskflow-dashboard.jpg"
+             alt="TaskFlow task manager dashboard with completion stats, sidebar filters and a task list">
+
+        <button class="preview-hit js-taskflow-preview"
+                type="button"
+                aria-haspopup="dialog"
+                aria-controls="taskflowPreview">
+            <span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M15 3h6v6"/><path d="M9 21H3v-6"/>
+                    <path d="M21 3l-7 7"/><path d="M3 21l7-7"/>
+                </svg>
+                Expand dashboard
+            </span>
+        </button>
+
+        <div class="project-number">04</div>
+    </div>
+
+    <div class="project-info">
+        <span class="project-category">WEB DEVELOPMENT</span>
+
+        <h3>TaskFlow — Task Management Dashboard</h3>
+
+        <p>
+            A responsive task manager with live search, status and
+            category filters, completion analytics and local
+            persistence — built with vanilla JavaScript and no
+            dependencies.
+        </p>
+
+        <div class="project-tags">
+            <span>HTML5</span>
+            <span>CSS3</span>
+            <span>JavaScript</span>
+            <span>LocalStorage</span>
+            <span>Responsive UI</span>
+        </div>
+
+        <div class="project-actions">
+            <a href="taskflow/index.html"
+               target="_blank"
+               rel="noopener"
+               class="demo-project-btn">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M8 5v14l11-7Z"/>
+                </svg>
+                Live Demo
+                <span>↗</span>
+            </a>
+
+            <button class="ghost-project-btn js-taskflow-preview"
+                    type="button"
+                    aria-haspopup="dialog"
+                    aria-controls="taskflowPreview">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/>
+                </svg>
+                Preview
+            </button>
+        </div>
+    </div>
+
+</div>
+
 <!-- Project 03 - Ghotki Case Management System -->
 <!-- Project 03 - Ghotki Case Management System -->
 <div class="project-card">
@@ -1440,6 +1509,51 @@
         </p>
 
     </footer>
+
+
+    <!-- TaskFlow Dashboard Preview -->
+    <dialog class="project-lightbox" id="taskflowPreview" aria-labelledby="taskflowPreviewTitle">
+
+        <div class="project-lightbox-panel">
+
+            <div class="project-lightbox-head">
+                <div>
+                    <span class="project-lightbox-eyebrow">TaskFlow · Dashboard Preview</span>
+                    <h3 id="taskflowPreviewTitle">Task Management Dashboard</h3>
+                </div>
+
+                <button class="lightbox-close js-lightbox-close"
+                        type="button"
+                        aria-label="Close dashboard preview">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <path d="M18 6 6 18M6 6l12 12"/>
+                    </svg>
+                </button>
+            </div>
+
+            <div class="project-lightbox-image">
+                <img src="images/taskflow-dashboard.jpg"
+                     alt="Full TaskFlow dashboard showing sidebar filters, completion statistics and the task list">
+            </div>
+
+            <div class="project-lightbox-foot">
+                <p>
+                    Captured from the live app — filter by status or
+                    category, search tasks and add new ones in the demo.
+                </p>
+
+                <a href="taskflow/index.html"
+                   target="_blank"
+                   rel="noopener"
+                   class="demo-project-btn">
+                    Open Live Demo
+                    <span>↗</span>
+                </a>
+            </div>
+
+        </div>
+
+    </dialog>
 
 
     <!-- Back To Top -->
