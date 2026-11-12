@@ -1160,6 +1160,7 @@ section:not(.hero) h2::after {
     font-size: 42px;
     margin-bottom: 18px;
     color: #e5e7eb;
+    text-align: center;
 }
 
 #skills h2::after {
