@@ -2873,6 +2873,7 @@ footer {
 #experience h2 {
     font-size: 42px;
     margin-bottom: 20px;
+    align-text: center;
 }
 
 #experience h2::after {
