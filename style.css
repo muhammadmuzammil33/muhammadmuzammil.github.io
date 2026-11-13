@@ -2771,6 +2771,172 @@ footer {
 
 
 /* ============================
+   EDUCATION SIDE IMAGES
+   ============================ */
+
+.education-media {
+    position: absolute;
+
+    top: 50%;
+
+    width: 32%;
+    max-width: 300px;
+
+    transform: translateY(-50%);
+
+    z-index: 1;
+
+    pointer-events: none;
+}
+
+.education-item:nth-child(odd) .education-media {
+    left: 56.5%;
+}
+
+.education-item:nth-child(even) .education-media {
+    right: 56.5%;
+}
+
+.education-media-frame {
+    --edu-glow: rgba(56, 189, 248, 0.14);
+    --edu-accent: rgba(56, 189, 248, 0.6);
+
+    position: relative;
+
+    aspect-ratio: 16 / 10;
+
+    overflow: hidden;
+
+    border-radius: 16px;
+
+    padding: 7px;
+
+    border: 1px solid rgba(148, 163, 184, 0.16);
+
+    background: linear-gradient(
+        160deg,
+        rgba(17, 24, 39, 0.92),
+        rgba(11, 17, 32, 0.92)
+    );
+
+    box-shadow:
+        0 12px 32px rgba(0, 0, 0, 0.35),
+        0 0 24px var(--edu-glow);
+
+    animation: educationMediaFloat 14s ease-in-out infinite;
+}
+
+.education-media-frame::before {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: 14%;
+    right: 14%;
+
+    height: 1px;
+
+    background: linear-gradient(
+        to right,
+        transparent,
+        var(--edu-accent),
+        transparent
+    );
+
+    pointer-events: none;
+}
+
+.education-media img {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    border-radius: 10px;
+
+    animation: educationMediaPan 26s ease-in-out infinite alternate;
+}
+
+.education-item:nth-child(2) .education-media-frame {
+    --edu-glow: rgba(168, 85, 247, 0.14);
+    --edu-accent: rgba(168, 85, 247, 0.6);
+
+    animation-delay: -5s;
+}
+
+.education-item:nth-child(2) .education-media img {
+    animation-delay: -9s;
+}
+
+.education-item:nth-child(3) .education-media-frame {
+    --edu-glow: rgba(34, 197, 94, 0.13);
+    --edu-accent: rgba(34, 197, 94, 0.55);
+
+    animation-delay: -9s;
+    animation-duration: 17s;
+}
+
+.education-item:nth-child(3) .education-media img {
+    animation-delay: -15s;
+}
+
+.education-item:nth-child(1) .education-media-frame {
+    animation-delay: -2s;
+}
+
+.education-item:nth-child(1) .education-media img {
+    animation-delay: -4s;
+}
+
+
+@keyframes educationMediaFloat {
+    0%,
+    100% {
+        transform: translate3d(0, 0, 0);
+    }
+
+    50% {
+        transform: translate3d(5px, -9px, 0);
+    }
+}
+
+
+@keyframes educationMediaPan {
+    0% {
+        transform: scale(1.04) translate3d(0, 0, 0);
+    }
+
+    100% {
+        transform: scale(1.1) translate3d(-7px, -3px, 0);
+    }
+}
+
+
+/* Keep the images out of the single-column mobile timeline */
+
+@media (max-width: 900px) {
+
+    .education-media {
+        display: none;
+    }
+
+}
+
+
+@media (prefers-reduced-motion: reduce) {
+
+    .education-media-frame,
+    .education-media img {
+        animation: none;
+    }
+
+}
+
+
+/* ============================
    EDUCATION MOBILE
    ============================ */
 
@@ -6866,4 +7032,165 @@ body.lightbox-open {
     .web-code-motion span {
         animation: none;
     }
+}
+
+/* =========================================================
+   CONTACT FORM
+   ========================================================= */
+
+.contact-form {
+    max-width: 640px;
+
+    margin: 0 auto 45px;
+    padding: 30px;
+
+    text-align: left;
+
+    background-color: rgba(11, 17, 32, 0.55);
+
+    background-image:
+        linear-gradient(
+            135deg,
+            rgba(255, 255, 255, 0.06),
+            rgba(255, 255, 255, 0.015) 55%,
+            rgba(255, 255, 255, 0) 100%
+        );
+
+    -webkit-backdrop-filter: blur(8px) saturate(140%);
+    backdrop-filter: blur(8px) saturate(140%);
+
+    border: 1px solid #263449;
+
+    border-radius: 18px;
+
+    box-shadow:
+        0 15px 40px rgba(0, 0, 0, 0.25);
+}
+
+.contact-form-row {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 18px;
+}
+
+.contact-field {
+    margin-bottom: 18px;
+}
+
+.contact-field label {
+    display: block;
+
+    color: #cbd5e1;
+
+    font-size: 13px;
+    font-weight: 600;
+
+    letter-spacing: 0.5px;
+
+    margin-bottom: 8px;
+}
+
+.contact-field input,
+.contact-field textarea {
+    width: 100%;
+
+    padding: 13px 15px;
+
+    background: rgba(7, 17, 31, 0.75);
+
+    border: 1px solid #263449;
+    border-radius: 10px;
+
+    color: #e5e7eb;
+
+    font: inherit;
+    font-size: 14px;
+
+    transition:
+        border-color 0.3s ease,
+        box-shadow 0.3s ease;
+
+    resize: vertical;
+}
+
+.contact-field input::placeholder,
+.contact-field textarea::placeholder {
+    color: #64748b;
+}
+
+.contact-field input:focus,
+.contact-field textarea:focus {
+    outline: none;
+
+    border-color: #38bdf8;
+
+    box-shadow:
+        0 0 0 3px rgba(56, 189, 248, 0.15);
+}
+
+.contact-submit {
+    width: 100%;
+
+    padding: 14px 22px;
+
+    border: none;
+    border-radius: 10px;
+
+    background: #38bdf8;
+
+    color: #07111f;
+
+    font-size: 15px;
+    font-weight: 700;
+
+    letter-spacing: 0.5px;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        background 0.3s ease;
+}
+
+.contact-submit:hover {
+    transform: translateY(-3px);
+
+    background: #5cc9f9;
+
+    box-shadow:
+        0 12px 30px rgba(56, 189, 248, 0.25);
+}
+
+.contact-form-status {
+    min-height: 20px;
+
+    margin: 14px 0 0;
+
+    text-align: center;
+
+    color: #f59e0b;
+
+    font-size: 13px;
+}
+
+.contact-form-status.is-ok {
+    color: #22c55e;
+}
+
+
+@media (max-width: 600px) {
+
+    .contact-form {
+        padding: 22px;
+    }
+
+    .contact-form-row {
+        grid-template-columns: 1fr;
+
+        gap: 0;
+    }
+
 }
