@@ -1519,6 +1519,42 @@
             Feel free to get in touch with me.
         </p>
 
+        <form class="contact-form" id="contactForm" novalidate>
+
+            <div class="contact-form-row">
+
+                <div class="contact-field">
+                    <label for="contactName">Name</label>
+                    <input type="text" id="contactName" name="name"
+                           placeholder="Your name" autocomplete="name" required>
+                </div>
+
+                <div class="contact-field">
+                    <label for="contactEmail">Email</label>
+                    <input type="email" id="contactEmail" name="email"
+                           placeholder="you@example.com" autocomplete="email" required>
+                </div>
+
+            </div>
+
+            <div class="contact-field">
+                <label for="contactSubject">Subject</label>
+                <input type="text" id="contactSubject" name="subject"
+                       placeholder="Project, opportunity, collaboration..." required>
+            </div>
+
+            <div class="contact-field">
+                <label for="contactMessage">Message</label>
+                <textarea id="contactMessage" name="message" rows="5"
+                          placeholder="Tell me about your project..." required></textarea>
+            </div>
+
+            <button type="submit" class="contact-submit">Send Message</button>
+
+            <p class="contact-form-status" role="status" aria-live="polite"></p>
+
+        </form>
+
         <div class="contact-links">
 
             <a href="mailto:dm4221863@gmail.com">
