@@ -266,3 +266,100 @@ if (reduceMotion) {
         closePreview();
     });
 })();
+
+
+/* =========================================================
+   CONTACT FORM
+   Static site: validates input, then POSTs the message to
+   Web3Forms, which forwards it straight to the owner's inbox.
+   ========================================================= */
+
+(function () {
+
+    var form = document.getElementById("contactForm");
+
+    if (!form) {
+        return;
+    }
+
+    var ACCESS_KEY = "c1d03c3a-4767-4907-b637-d636d7544b08";
+
+    var status = form.querySelector(".contact-form-status");
+    var submitButton = form.querySelector(".contact-submit");
+
+    function setStatus(message, isOk) {
+
+        status.textContent = message;
+
+        status.classList.toggle("is-ok", Boolean(isOk));
+    }
+
+    form.addEventListener("submit", function (event) {
+
+        event.preventDefault();
+
+        var name = form.elements.name.value.trim();
+        var email = form.elements.email.value.trim();
+        var subject = form.elements.subject.value.trim();
+        var message = form.elements.message.value.trim();
+
+        if (!name || !email || !subject || !message) {
+            setStatus("Please fill in all fields.");
+            return;
+        }
+
+        if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+            setStatus("Please enter a valid email address.");
+            return;
+        }
+
+        if (ACCESS_KEY.indexOf("YOUR_") === 0) {
+            setStatus("The form is not configured yet.");
+            return;
+        }
+
+        var data = new FormData();
+
+        data.append("access_key", ACCESS_KEY);
+        data.append("name", name);
+        data.append("email", email);
+        data.append("subject", "Portfolio contact: " + subject);
+        data.append("message", message);
+
+        submitButton.disabled = true;
+
+        setStatus("Sending...");
+
+        fetch("https://api.web3forms.com/submit", {
+
+            method: "POST",
+
+            body: data
+
+        }).then(function (response) {
+
+            return response.json();
+
+        }).then(function (result) {
+
+            if (result.success) {
+
+                setStatus("Message sent! I will get back to you soon.", true);
+
+                form.reset();
+
+            } else {
+
+                setStatus("Sending failed. Please try again or email me directly.");
+            }
+
+        }).catch(function () {
+
+            setStatus("Network error. Please try again or email me directly.");
+
+        }).finally(function () {
+
+            submitButton.disabled = false;
+        });
+    });
+})();
