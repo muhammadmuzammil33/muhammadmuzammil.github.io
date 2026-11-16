@@ -7249,20 +7249,8 @@ body.lightbox-open {
 
 
 /* =========================
-   STICKY NAVBAR + SCROLLSPY
+   SCROLLSPY NAV
 ========================= */
-
-@media (min-width: 769px) {
-
-    html {
-        scroll-padding-top: 120px;
-    }
-
-    nav {
-        position: sticky;
-        top: 0;
-    }
-}
 
 nav ul li a.is-active {
     color: #38bdf8;
@@ -7280,5 +7268,185 @@ nav ul li a.is-active::after {
 
     .scroll-progress span {
         transition: none;
+    }
+}
+
+
+/* =========================
+   SECTION EYEBROW LABELS
+========================= */
+
+#about > h2::before {
+    content: "WHO I AM";
+}
+
+#education > h2::before {
+    content: "ACADEMIC PATH";
+}
+
+#experience > h2::before {
+    content: "CAREER JOURNEY";
+}
+
+#skills .skills-content > h2::before {
+    content: "WHAT I DO";
+}
+
+#certifications .certifications-title > h2::before {
+    content: "CREDENTIALS";
+}
+
+#projects > h2::before {
+    content: "MY WORK";
+}
+
+#contact > h2::before {
+    content: "GET IN TOUCH";
+}
+
+#about > h2::before,
+#education > h2::before,
+#experience > h2::before,
+#skills .skills-content > h2::before,
+#certifications .certifications-title > h2::before,
+#projects > h2::before,
+#contact > h2::before {
+    display: block;
+
+    margin-bottom: 14px;
+
+    font-size: 12px;
+    font-weight: 700;
+
+    letter-spacing: 4px;
+
+    color: #38bdf8;
+
+    background: linear-gradient(90deg, #38bdf8, #a855f7);
+
+    -webkit-background-clip: text;
+    background-clip: text;
+
+    -webkit-text-fill-color: transparent;
+}
+
+
+/* =========================
+   ANIMATED SECTION DIVIDERS
+========================= */
+
+.section-divider {
+    position: relative;
+
+    height: 2px;
+
+    overflow: hidden;
+
+    pointer-events: none;
+
+    background: rgba(148, 163, 184, 0.08);
+}
+
+.section-divider::before {
+    content: "";
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 30vw;
+    height: 100%;
+
+    background: linear-gradient(
+        90deg,
+        transparent 0%,
+        rgba(56, 189, 248, 0.7) 45%,
+        rgba(168, 85, 247, 0.8) 60%,
+        transparent 100%
+    );
+
+    transform: translateX(-30vw);
+
+    animation: sectionDividerFlow 9s linear infinite;
+}
+
+@keyframes sectionDividerFlow {
+
+    0% {
+        transform: translateX(-30vw);
+    }
+
+    100% {
+        transform: translateX(100vw);
+    }
+}
+
+
+/* =========================
+   PROJECT CARD 3D TILT
+========================= */
+
+html.reveal-ready .seo-project-card.is-tilting,
+html.reveal-ready .web-project-card.is-tilting,
+html.reveal-ready .taskflow-card.is-tilting {
+    transition: transform 0.12s ease-out;
+}
+
+html.reveal-ready .seo-project-card.is-tilting:hover,
+html.reveal-ready .web-project-card.is-tilting:hover,
+html.reveal-ready .taskflow-card.is-tilting:hover {
+    border-color: #38bdf8;
+
+    box-shadow:
+        0 25px 60px rgba(0, 0, 0, 0.45),
+        0 0 30px rgba(56, 189, 248, 0.16);
+}
+
+
+/* =========================
+   BUTTON MICRO-INTERACTIONS
+========================= */
+
+.btn::after {
+    content: "\2192";
+
+    display: inline-block;
+
+    margin-left: 9px;
+
+    transition: transform 0.3s ease;
+}
+
+.btn:hover::after {
+    transform: translateX(5px);
+}
+
+.btn[download]::after {
+    content: "\2193";
+}
+
+.btn[download]:hover::after {
+    transform: translateY(4px);
+}
+
+
+/* =========================
+   REDUCED MOTION: NEW EFFECTS
+========================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .section-divider::before {
+        animation: none;
+
+        opacity: 0.5;
+    }
+
+    .btn::after,
+    .btn:hover::after,
+    .btn[download]:hover::after {
+        transition: none;
+
+        transform: none;
     }
 }

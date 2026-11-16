@@ -363,3 +363,147 @@ if (reduceMotion) {
         });
     });
 })();
+
+// ============================
+// Scroll Progress Bar + Scrollspy Nav
+// ============================
+
+(function () {
+
+    var progressFill = document.querySelector(".scroll-progress span");
+    var navLinks = Array.prototype.slice.call(
+        document.querySelectorAll("nav ul li a[href^='#']")
+    );
+    var sections = navLinks.map(function (link) {
+        return document.getElementById(link.getAttribute("href").slice(1));
+    });
+    var ticking = false;
+
+    function update() {
+
+        ticking = false;
+
+        var max = document.documentElement.scrollHeight - window.innerHeight;
+        var ratio = max > 0 ? window.scrollY / max : 0;
+
+        if (progressFill) {
+            progressFill.style.transform =
+                "scaleX(" + Math.min(1, Math.max(0, ratio)) + ")";
+        }
+
+        var line = window.innerHeight * 0.4;
+        var activeIndex = 0;
+
+        for (var i = 0; i < sections.length; i++) {
+            if (sections[i] && sections[i].getBoundingClientRect().top <= line) {
+                activeIndex = i;
+            }
+        }
+
+        for (var j = 0; j < navLinks.length; j++) {
+            navLinks[j].classList.toggle("is-active", j === activeIndex);
+        }
+    }
+
+    window.addEventListener("scroll", function () {
+        if (!ticking) {
+            ticking = true;
+            window.requestAnimationFrame(update);
+        }
+    }, { passive: true });
+
+    window.addEventListener("resize", update);
+
+    update();
+})();
+
+
+// ============================
+// Animated Section Dividers
+// ============================
+
+(function () {
+
+    var sections = document.querySelectorAll("body > section:not(#home)");
+
+    for (var i = 0; i < sections.length; i++) {
+
+        var divider = document.createElement("div");
+
+        divider.className = "section-divider";
+
+        divider.setAttribute("aria-hidden", "true");
+
+        sections[i].parentNode.insertBefore(divider, sections[i]);
+    }
+})();
+
+
+// ============================
+// Project Card 3D Tilt
+// ============================
+
+(function () {
+
+    var finePointer = window.matchMedia("(hover: hover) and (pointer: fine)");
+    var reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+
+    if (!finePointer.matches || reducedMotion.matches) {
+        return;
+    }
+
+    var cards = document.querySelectorAll(
+        ".seo-project-card, .web-project-card, .taskflow-card"
+    );
+
+    var MAX_TILT = 5;
+
+    for (var i = 0; i < cards.length; i++) {
+
+        (function (card) {
+
+            var frame = null;
+
+            card.addEventListener("pointermove", function (event) {
+
+                if (event.pointerType !== "mouse") {
+                    return;
+                }
+
+                var rect = card.getBoundingClientRect();
+
+                var px = (event.clientX - rect.left) / rect.width - 0.5;
+                var py = (event.clientY - rect.top) / rect.height - 0.5;
+
+                var rotateX = (-py * MAX_TILT * 2).toFixed(2);
+                var rotateY = (px * MAX_TILT * 2).toFixed(2);
+
+                if (frame) {
+                    window.cancelAnimationFrame(frame);
+                }
+
+                frame = window.requestAnimationFrame(function () {
+
+                    card.classList.add("is-tilting");
+
+                    card.style.transform =
+                        "perspective(900px) rotateX(" + rotateX + "deg) " +
+                        "rotateY(" + rotateY + "deg) translateY(-8px) scale(1.01)";
+                });
+            });
+
+            card.addEventListener("pointerleave", function () {
+
+                if (frame) {
+                    window.cancelAnimationFrame(frame);
+                    frame = null;
+                }
+
+                card.classList.remove("is-tilting");
+
+                card.style.transform = "";
+            });
+
+        })(cards[i]);
+    }
+})();
