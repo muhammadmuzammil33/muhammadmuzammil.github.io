@@ -924,3 +924,66 @@ if (reduceMotion) {
         section.insertBefore(fx, section.firstChild);
     });
 })();
+
+
+/* =========================
+   HERO PROFILE 3D TILT
+========================= */
+
+(function () {
+
+    var portrait = document.querySelector(".hero-image");
+
+    if (!portrait) {
+        return;
+    }
+
+    var finePointer = window.matchMedia("(hover: hover) and (pointer: fine)");
+    var reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+
+    if (!finePointer.matches || reducedMotion.matches) {
+        return;
+    }
+
+    var MAX_TILT = 6;
+    var frame = null;
+    var rx = 0;
+    var ry = 0;
+
+    function apply() {
+
+        frame = null;
+
+        portrait.style.transform =
+            "perspective(900px) rotateX(" + rx + "deg) rotateY(" + ry + "deg) translateY(-4px) scale(1.02)";
+    }
+
+    portrait.addEventListener("pointermove", function (event) {
+
+        if (event.pointerType !== "mouse") {
+            return;
+        }
+
+        var rect = portrait.getBoundingClientRect();
+
+        var px = (event.clientX - rect.left) / rect.width - 0.5;
+        var py = (event.clientY - rect.top) / rect.height - 0.5;
+
+        ry = px * MAX_TILT * 2;
+        rx = -py * MAX_TILT * 2;
+
+        if (!frame) {
+            frame = requestAnimationFrame(apply);
+        }
+    });
+
+    portrait.addEventListener("pointerleave", function () {
+
+        if (frame) {
+            cancelAnimationFrame(frame);
+            frame = null;
+        }
+
+        portrait.style.transform = "";
+    });
+})();
