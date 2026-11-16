@@ -7593,3 +7593,73 @@ html.reveal-ready .taskflow-card.is-tilting:hover {
         animation: none;
     }
 }
+
+
+/* =========================
+   SECTION THEMED BACKGROUNDS
+========================= */
+
+.section-fx {
+    position: absolute;
+    inset: 0;
+
+    z-index: -1;
+
+    overflow: hidden;
+
+    pointer-events: none;
+}
+
+.section-fx-icon {
+    position: absolute;
+
+    display: block;
+
+    color: var(--fx-color, #38bdf8);
+
+    opacity: 0.12;
+
+    animation:
+        sectionFxFloat var(--fx-dur, 14s) ease-in-out var(--fx-delay, 0s)
+        infinite alternate;
+}
+
+.section-fx-icon svg {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    fill: none;
+
+    stroke: currentColor;
+
+    stroke-width: 1.4;
+
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+@keyframes sectionFxFloat {
+
+    0% {
+        transform: translate3d(0, 0, 0) rotate(-3deg);
+
+        opacity: 0.07;
+    }
+
+    100% {
+        transform: translate3d(8px, -14px, 0) rotate(4deg);
+
+        opacity: 0.17;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+    .section-fx-icon {
+        animation: none;
+
+        opacity: 0.1;
+    }
+}

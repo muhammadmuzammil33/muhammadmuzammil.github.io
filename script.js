@@ -677,3 +677,250 @@ if (reduceMotion) {
         });
     });
 })();
+
+
+// ============================
+// Section Themed Background Icons
+// ============================
+
+(function () {
+
+    var ICONS = {
+
+        cap: [
+            "M12 4 2 9l10 5 10-5-10-5Z",
+            "M6 11.5V16c0 1.4 2.7 2.5 6 2.5s6-1.1 6-2.5v-4.5",
+            "M22 9v4"
+        ],
+        book: [
+            "M4 4.5h6.5A2.5 2.5 0 0 1 13 7v13a2 2 0 0 0-2-2H4V4.5Z",
+            "M20 4.5h-6.5A2.5 2.5 0 0 0 11 7v13a2 2 0 0 1 2-2h7V4.5Z"
+        ],
+        pencil: [
+            "M4 20l4.5-1L19.5 8l-3.5-3.5L5 15.5 4 20Z",
+            "M13.5 6.5 17 10"
+        ],
+        diploma: [
+            "M6 3h12v11H6Z",
+            "M9 6.5h6",
+            "M9 9.5h6",
+            "M10 14v6l2-1.4L14 20v-6"
+        ],
+
+        briefcase: [
+            "M3 8h18v11H3Z",
+            "M9 8V6a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v2",
+            "M3 13h18"
+        ],
+        calendar: [
+            "M4 5h16v16H4Z",
+            "M4 9.5h16",
+            "M8 3v4",
+            "M16 3v4",
+            "M8 13h2",
+            "M12 13h2",
+            "M16 13h2",
+            "M8 17h2",
+            "M12 17h2"
+        ],
+        chartUp: [
+            "M4 20V5",
+            "M4 20h16",
+            "M8 16l4-5 3 2 5-6"
+        ],
+        clock: [
+            "M12 3a9 9 0 1 0 0 18 9 9 0 0 0 0-18Z",
+            "M12 7.5V12l3 2"
+        ],
+
+        brackets: [
+            "M9 5 4 12l5 7",
+            "M15 5l5 7-5 7"
+        ],
+        gear: [
+            "M12 8.5a3.5 3.5 0 1 0 0 7 3.5 3.5 0 0 0 0-7Z",
+            "M12 2.5v3",
+            "M12 18.5v3",
+            "M2.5 12h3",
+            "M18.5 12h3",
+            "M5 5l2.1 2.1",
+            "M16.9 16.9 19 19",
+            "M19 5l-2.1 2.1",
+            "M7.1 16.9 5 19"
+        ],
+        database: [
+            "M4 6c0-1.6 3.6-3 8-3s8 1.4 8 3-3.6 3-8 3-8-1.4-8-3Z",
+            "M4 6v12c0 1.6 3.6 3 8 3s8-1.4 8-3V6",
+            "M4 12c0 1.6 3.6 3 8 3s8-1.4 8-3"
+        ],
+        terminal: [
+            "M3 4.5h18v15H3Z",
+            "M7 9l3 3-3 3",
+            "M13 15h4"
+        ],
+
+        medal: [
+            "M12 3.5a4.5 4.5 0 1 0 0 9 4.5 4.5 0 0 0 0-9Z",
+            "M8.8 11.6 6 21l6-3.2 6 3.2-2.8-9.4"
+        ],
+        shieldCheck: [
+            "M12 3l7 2.8V12c0 4.2-3 7.3-7 9-4-1.7-7-4.8-7-9V5.8L12 3Z",
+            "M9 11.8l2.2 2.2 4-4.2"
+        ],
+        certificate: [
+            "M5 3h14v13H5Z",
+            "M8 6.5h8",
+            "M8 9.5h8",
+            "M8 12.5h4.5",
+            "M15.5 15a2.6 2.6 0 1 0 0 5.2 2.6 2.6 0 0 0 0-5.2Z"
+        ],
+        star: [
+            "M12 3.5l2.6 5.4 5.9.8-4.3 4.1 1.1 5.9L12 16.9l-5.3 2.8 1.1-5.9-4.3-4.1 5.9-.8L12 3.5Z"
+        ],
+
+        browser: [
+            "M3 4.5h18v15H3Z",
+            "M3 8.5h18",
+            "M6 6.5h.01",
+            "M8.5 6.5h.01",
+            "M11 6.5h.01"
+        ],
+        cursor: [
+            "M6 3l12 8.5-5.2 1.2 2.7 5.6-2.7 1.3-2.7-5.6L6 17.5V3Z"
+        ],
+
+        envelope: [
+            "M3 5h18v14H3Z",
+            "M3 6l9 7 9-7"
+        ],
+        chat: [
+            "M4 4h16v11H9l-5 5V4Z",
+            "M8 9h8",
+            "M8 12h5"
+        ],
+        phone: [
+            "M8 3h8v18H8Z",
+            "M11 17.5h2"
+        ],
+        plane: [
+            "M21 3.5 3 10.2l7 2 2.8 7.3L21 3.5Z",
+            "M10 12.2 21 3.5"
+        ]
+    };
+
+    var SECTIONS = {
+        education: {
+            colors: ["rgba(56, 189, 248, 0.6)"],
+            icons: ["cap", "book", "pencil", "diploma"]
+        },
+        experience: {
+            colors: ["rgba(168, 85, 247, 0.55)"],
+            icons: ["briefcase", "calendar", "chartUp", "clock"]
+        },
+        skills: {
+            colors: ["rgba(34, 197, 94, 0.5)"],
+            icons: ["brackets", "gear", "database", "terminal"]
+        },
+        certifications: {
+            colors: ["rgba(245, 158, 11, 0.45)"],
+            icons: ["medal", "shieldCheck", "certificate", "star"]
+        },
+        "seo-projects": {
+            colors: ["rgba(56, 189, 248, 0.55)", "rgba(168, 85, 247, 0.45)"],
+            icons: ["chartUp", "browser", "star", "cursor"]
+        },
+        "web-projects": {
+            colors: ["rgba(56, 189, 248, 0.55)", "rgba(34, 197, 94, 0.4)"],
+            icons: ["browser", "brackets", "terminal", "database"]
+        },
+        contact: {
+            colors: ["rgba(56, 189, 248, 0.55)"],
+            icons: ["envelope", "chat", "phone", "plane"]
+        }
+    };
+
+    var SPOTS = [
+        { side: "left", top: 10, gap: 4 },
+        { side: "right", top: 7, gap: 5 },
+        { side: "left", top: 26, gap: 6 },
+        { side: "right", top: 29, gap: 4 },
+        { side: "left", top: 45, gap: 5 },
+        { side: "right", top: 48, gap: 6 },
+        { side: "left", top: 63, gap: 4 },
+        { side: "right", top: 66, gap: 5 }
+    ];
+
+    var SIZES = [46, 60, 38, 52, 44, 58, 40, 54];
+
+    var NS = "http://www.w3.org/2000/svg";
+
+    function buildIcon(name) {
+
+        var svg = document.createElementNS(NS, "svg");
+
+        svg.setAttribute("viewBox", "0 0 24 24");
+
+        svg.setAttribute("aria-hidden", "true");
+
+        svg.setAttribute("focusable", "false");
+
+        var paths = ICONS[name];
+
+        for (var i = 0; i < paths.length; i++) {
+
+            var path = document.createElementNS(NS, "path");
+
+            path.setAttribute("d", paths[i]);
+
+            svg.appendChild(path);
+        }
+
+        return svg;
+    }
+
+    Object.keys(SECTIONS).forEach(function (id) {
+
+        var section = document.getElementById(id);
+
+        if (!section) {
+            return;
+        }
+
+        var config = SECTIONS[id];
+
+        var fx = document.createElement("div");
+
+        fx.className = "section-fx";
+
+        fx.setAttribute("aria-hidden", "true");
+
+        for (var i = 0; i < SPOTS.length; i++) {
+
+            var spot = SPOTS[i];
+
+            var icon = document.createElement("span");
+
+            icon.className = "section-fx-icon";
+
+            icon.style[spot.side] = spot.gap + "%";
+            icon.style.top = spot.top + "%";
+
+            icon.style.width = SIZES[i] + "px";
+            icon.style.height = SIZES[i] + "px";
+
+            icon.style.setProperty(
+                "--fx-color",
+                config.colors[i % config.colors.length]
+            );
+
+            icon.style.setProperty("--fx-dur", (13 + (i % 4) * 2) + "s");
+            icon.style.setProperty("--fx-delay", (-i * 1.8) + "s");
+
+            icon.appendChild(buildIcon(config.icons[i % config.icons.length]));
+
+            fx.appendChild(icon);
+        }
+
+        section.insertBefore(fx, section.firstChild);
+    });
+})();
