@@ -5089,6 +5089,16 @@ html {
     color: #94a3b8;
     font-size: 14px;
 }
+
+.pmd-experience-card .experience-date {
+    color: #38bdf8;
+
+    font-size: 13px;
+
+    font-weight: bold;
+
+    letter-spacing: 0.8px;
+}
 /* ================================
    PROJECT 03 - CASE MANAGEMENT
 ================================ */
@@ -7249,20 +7259,8 @@ body.lightbox-open {
 
 
 /* =========================
-   STICKY NAVBAR + SCROLLSPY
+   SCROLLSPY NAV
 ========================= */
-
-@media (min-width: 769px) {
-
-    html {
-        scroll-padding-top: 120px;
-    }
-
-    nav {
-        position: sticky;
-        top: 0;
-    }
-}
 
 nav ul li a.is-active {
     color: #38bdf8;
@@ -7280,5 +7278,476 @@ nav ul li a.is-active::after {
 
     .scroll-progress span {
         transition: none;
+    }
+}
+
+
+/* =========================
+   SECTION EYEBROW LABELS
+========================= */
+
+#about > h2::before {
+    content: "WHO I AM";
+}
+
+#education > h2::before {
+    content: "ACADEMIC PATH";
+}
+
+#experience > h2::before {
+    content: "CAREER JOURNEY";
+}
+
+#skills .skills-content > h2::before {
+    content: "WHAT I DO";
+}
+
+#certifications .certifications-title > h2::before {
+    content: "CREDENTIALS";
+}
+
+#projects > h2::before {
+    content: "MY WORK";
+}
+
+#contact > h2::before {
+    content: "GET IN TOUCH";
+}
+
+#about > h2::before,
+#education > h2::before,
+#experience > h2::before,
+#skills .skills-content > h2::before,
+#certifications .certifications-title > h2::before,
+#projects > h2::before,
+#contact > h2::before {
+    display: block;
+
+    margin-bottom: 14px;
+
+    font-size: 12px;
+    font-weight: 700;
+
+    letter-spacing: 4px;
+
+    color: #38bdf8;
+
+    background: linear-gradient(90deg, #38bdf8, #a855f7);
+
+    -webkit-background-clip: text;
+    background-clip: text;
+
+    -webkit-text-fill-color: transparent;
+}
+
+
+/* =========================
+   ANIMATED SECTION DIVIDERS
+========================= */
+
+.section-divider {
+    position: relative;
+
+    height: 2px;
+
+    overflow: hidden;
+
+    pointer-events: none;
+
+    background: rgba(148, 163, 184, 0.08);
+}
+
+.section-divider::before {
+    content: "";
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 30vw;
+    height: 100%;
+
+    background: linear-gradient(
+        90deg,
+        transparent 0%,
+        rgba(56, 189, 248, 0.7) 45%,
+        rgba(168, 85, 247, 0.8) 60%,
+        transparent 100%
+    );
+
+    transform: translateX(-30vw);
+
+    animation: sectionDividerFlow 9s linear infinite;
+}
+
+@keyframes sectionDividerFlow {
+
+    0% {
+        transform: translateX(-30vw);
+    }
+
+    100% {
+        transform: translateX(100vw);
+    }
+}
+
+
+/* =========================
+   PROJECT CARD 3D TILT
+========================= */
+
+html.reveal-ready .seo-project-card.is-tilting,
+html.reveal-ready .web-project-card.is-tilting,
+html.reveal-ready .taskflow-card.is-tilting {
+    transition: transform 0.12s ease-out;
+}
+
+html.reveal-ready .seo-project-card.is-tilting:hover,
+html.reveal-ready .web-project-card.is-tilting:hover,
+html.reveal-ready .taskflow-card.is-tilting:hover {
+    border-color: #38bdf8;
+
+    box-shadow:
+        0 25px 60px rgba(0, 0, 0, 0.45),
+        0 0 30px rgba(56, 189, 248, 0.16);
+}
+
+
+/* =========================
+   BUTTON MICRO-INTERACTIONS
+========================= */
+
+.btn::after {
+    content: "\2192";
+
+    display: inline-block;
+
+    margin-left: 9px;
+
+    transition: transform 0.3s ease;
+}
+
+.btn:hover::after {
+    transform: translateX(5px);
+}
+
+.btn[download]::after {
+    content: "\2193";
+}
+
+.btn[download]:hover::after {
+    transform: translateY(4px);
+}
+
+
+/* =========================
+   REDUCED MOTION: NEW EFFECTS
+========================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .section-divider::before {
+        animation: none;
+
+        opacity: 0.5;
+    }
+
+    .btn::after,
+    .btn:hover::after,
+    .btn[download]:hover::after {
+        transition: none;
+
+        transform: none;
+    }
+}
+
+
+/* =========================
+   ABOUT BACKGROUND EFFECTS
+========================= */
+
+.about-bg-fx {
+    --about-mx: 62%;
+    --about-my: 38%;
+
+    position: absolute;
+    inset: 0;
+
+    z-index: -1;
+
+    overflow: hidden;
+
+    pointer-events: none;
+}
+
+
+/* Cursor spotlight */
+
+.about-spotlight {
+    position: absolute;
+    inset: 0;
+
+    background: radial-gradient(
+        circle 600px at var(--about-mx) var(--about-my),
+        rgba(56, 189, 248, 0.10) 0%,
+        rgba(56, 189, 248, 0.04) 45%,
+        transparent 72%
+    );
+}
+
+
+/* SVG layers (constellation + circuits) */
+
+.about-layer {
+    position: absolute;
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+}
+
+.about-constellation {
+    animation: aboutConstellationDrift 20s ease-in-out infinite alternate;
+}
+
+.about-constellation-lines line {
+    stroke: rgba(56, 189, 248, 0.10);
+
+    stroke-width: 1;
+}
+
+.about-constellation-node {
+    fill: #38bdf8;
+
+    opacity: 0.18;
+
+    animation: aboutNodePulse 7s ease-in-out infinite;
+}
+
+.about-constellation-node.is-purple {
+    fill: #a855f7;
+}
+
+@keyframes aboutNodePulse {
+
+    0%,
+    100% {
+        opacity: 0.14;
+    }
+
+    50% {
+        opacity: 0.4;
+    }
+}
+
+@keyframes aboutConstellationDrift {
+
+    0% {
+        transform: translate3d(0, 0, 0);
+    }
+
+    100% {
+        transform: translate3d(8px, -6px, 0);
+    }
+}
+
+.about-circuit {
+    fill: none;
+
+    stroke: rgba(56, 189, 248, 0.16);
+
+    stroke-width: 1;
+
+    stroke-linecap: round;
+
+    stroke-dasharray: 5 12;
+
+    animation: aboutCircuitFlow 9s linear infinite;
+}
+
+.about-circuit.is-purple {
+    stroke: rgba(168, 85, 247, 0.16);
+}
+
+.about-circuit-terminal {
+    fill: none;
+
+    stroke: rgba(56, 189, 248, 0.22);
+
+    stroke-width: 1;
+}
+
+.about-circuit-terminal.is-purple {
+    stroke: rgba(168, 85, 247, 0.22);
+}
+
+@keyframes aboutCircuitFlow {
+
+    0% {
+        stroke-dashoffset: 0;
+    }
+
+    100% {
+        stroke-dashoffset: -170;
+    }
+}
+
+
+/* Reduced motion */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .about-constellation,
+    .about-constellation-node,
+    .about-circuit {
+        animation: none;
+    }
+}
+
+
+/* =========================
+   SECTION THEMED BACKGROUNDS
+========================= */
+
+.section-fx {
+    position: absolute;
+    inset: 0;
+
+    z-index: -1;
+
+    overflow: hidden;
+
+    pointer-events: none;
+}
+
+.section-fx-icon {
+    position: absolute;
+
+    display: block;
+
+    color: var(--fx-color, #38bdf8);
+
+    opacity: 0.12;
+
+    animation:
+        sectionFxFloat var(--fx-dur, 14s) ease-in-out var(--fx-delay, 0s)
+        infinite alternate;
+}
+
+.section-fx-icon svg {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    fill: none;
+
+    stroke: currentColor;
+
+    stroke-width: 1.4;
+
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+@keyframes sectionFxFloat {
+
+    0% {
+        transform: translate3d(0, 0, 0) rotate(-3deg);
+
+        opacity: 0.07;
+    }
+
+    100% {
+        transform: translate3d(8px, -14px, 0) rotate(4deg);
+
+        opacity: 0.17;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+    .section-fx-icon {
+        animation: none;
+
+        opacity: 0.1;
+    }
+}
+
+
+/* ============================
+   NAV SOCIAL LINKS (GitHub + LinkedIn)
+   ============================ */
+
+.nav-social {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    margin-left: 17px;
+}
+
+.nav-social .linkedin-btn {
+    margin: 0;
+}
+
+.github-btn {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+
+    padding: 7px 10px;
+
+    color: #38bdf8;
+    text-decoration: none;
+
+    border: 1px solid #38bdf8;
+    border-radius: 6px;
+
+    font-size: 12px;
+    font-weight: bold;
+
+    transition: 0.3s ease;
+    white-space: nowrap;
+}
+
+.github-btn span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 18px;
+    height: 18px;
+
+    background: #38bdf8;
+    color: #07111f;
+
+    border-radius: 3px;
+}
+
+.github-btn svg {
+    display: block;
+}
+
+.github-btn:hover {
+    background: #38bdf8;
+    color: #07111f;
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 6px 15px rgba(56, 189, 248, 0.25);
+}
+
+.github-btn:hover span {
+    background: #07111f;
+    color: #38bdf8;
+}
+
+@media (max-width: 900px) {
+
+    .nav-social {
+        margin-left: 0;
+        margin-top: 5px;
     }
 }
