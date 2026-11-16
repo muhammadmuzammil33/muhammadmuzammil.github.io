@@ -507,3 +507,173 @@ if (reduceMotion) {
         })(cards[i]);
     }
 })();
+
+
+// ============================
+// About Section Background Effects
+// ============================
+
+(function () {
+
+    var fx = document.querySelector(".about-bg-fx");
+
+    if (!fx) {
+        return;
+    }
+
+    var NS = "http://www.w3.org/2000/svg";
+
+    function createLayer() {
+
+        var svg = document.createElementNS(NS, "svg");
+
+        svg.setAttribute("viewBox", "0 0 1000 700");
+
+        svg.setAttribute("preserveAspectRatio", "xMidYMid slice");
+
+        svg.setAttribute("aria-hidden", "true");
+
+        svg.setAttribute("focusable", "false");
+
+        svg.classList.add("about-layer");
+
+        return svg;
+    }
+
+    // Constellation network
+
+    var nodes = [
+        [80, 100], [210, 64], [352, 128], [118, 252],
+        [280, 296], [452, 214], [72, 404], [258, 448],
+        [430, 372], [596, 286], [148, 556], [352, 576],
+        [540, 492], [700, 168], [664, 410], [788, 592]
+    ];
+
+    var constellation = createLayer();
+
+    var drift = document.createElementNS(NS, "g");
+
+    drift.setAttribute("class", "about-constellation");
+
+    var lineGroup = document.createElementNS(NS, "g");
+
+    lineGroup.setAttribute("class", "about-constellation-lines");
+
+    var MAX_LINK_DISTANCE = 190;
+
+    for (var i = 0; i < nodes.length; i++) {
+        for (var j = i + 1; j < nodes.length; j++) {
+
+            var dx = nodes[i][0] - nodes[j][0];
+            var dy = nodes[i][1] - nodes[j][1];
+
+            if (Math.sqrt(dx * dx + dy * dy) > MAX_LINK_DISTANCE) {
+                continue;
+            }
+
+            var line = document.createElementNS(NS, "line");
+
+            line.setAttribute("x1", nodes[i][0]);
+            line.setAttribute("y1", nodes[i][1]);
+            line.setAttribute("x2", nodes[j][0]);
+            line.setAttribute("y2", nodes[j][1]);
+
+            lineGroup.appendChild(line);
+        }
+    }
+
+    drift.appendChild(lineGroup);
+
+    for (var k = 0; k < nodes.length; k++) {
+
+        var circle = document.createElementNS(NS, "circle");
+
+        circle.setAttribute("cx", nodes[k][0]);
+        circle.setAttribute("cy", nodes[k][1]);
+        circle.setAttribute("r", k % 5 === 2 ? 2.6 : 2);
+
+        circle.setAttribute("class", "about-constellation-node" + (k % 5 === 2 ? " is-purple" : ""));
+
+        circle.style.animationDelay = (-k * 0.6) + "s";
+
+        drift.appendChild(circle);
+    }
+
+    constellation.appendChild(drift);
+
+    fx.appendChild(constellation);
+
+    // Circuit traces
+
+    var circuits = [
+        { d: "M0 78 H180 L214 112 H372", end: [372, 112], purple: false },
+        { d: "M1000 128 H868 L834 162 H706", end: [706, 162], purple: true },
+        { d: "M0 540 H96 L138 582 H246", end: [246, 582], purple: false },
+        { d: "M1000 620 H904 L872 588 H764", end: [764, 588], purple: false },
+        { d: "M338 700 V648 L296 606 V512", end: [296, 512], purple: true }
+    ];
+
+    var circuitLayer = createLayer();
+
+    for (var c = 0; c < circuits.length; c++) {
+
+        var path = document.createElementNS(NS, "path");
+
+        path.setAttribute("d", circuits[c].d);
+
+        path.setAttribute("class", "about-circuit" + (circuits[c].purple ? " is-purple" : ""));
+
+        path.style.animationDelay = (-c * 1.7) + "s";
+
+        circuitLayer.appendChild(path);
+
+        var terminal = document.createElementNS(NS, "circle");
+
+        terminal.setAttribute("r", 2.4);
+
+        terminal.setAttribute("cx", circuits[c].end[0]);
+        terminal.setAttribute("cy", circuits[c].end[1]);
+
+        terminal.setAttribute("class", "about-circuit-terminal" + (circuits[c].purple ? " is-purple" : ""));
+
+        circuitLayer.appendChild(terminal);
+    }
+
+    fx.appendChild(circuitLayer);
+
+    // Cursor spotlight
+
+    var finePointer = window.matchMedia("(hover: hover) and (pointer: fine)");
+    var reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+
+    if (!finePointer.matches || reducedMotion.matches) {
+        return;
+    }
+
+    var section = fx.parentNode;
+    var frame = null;
+
+    section.addEventListener("pointermove", function (event) {
+
+        if (event.pointerType !== "mouse") {
+            return;
+        }
+
+        var rect = section.getBoundingClientRect();
+
+        var mx = ((event.clientX - rect.left) / rect.width) * 100;
+        var my = ((event.clientY - rect.top) / rect.height) * 100;
+
+        if (frame) {
+            return;
+        }
+
+        frame = window.requestAnimationFrame(function () {
+
+            frame = null;
+
+            fx.style.setProperty("--about-mx", mx.toFixed(1) + "%");
+            fx.style.setProperty("--about-my", my.toFixed(1) + "%");
+        });
+    });
+})();
