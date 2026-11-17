@@ -2035,19 +2035,19 @@ footer {
 
 .code-lines {
     position: absolute;
-    right: 7%;
-    top: 18%;
-    width: 420px;
+    right: -1.8%;
+    top: 24%;
+    width: 220px;
     display: flex;
     flex-direction: column;
-    gap: 16px;
+    gap: 14px;
     transform: rotate(-5deg);
-    opacity: 0.35;
+    opacity: 0.45;
 }
 
 .code-lines span {
     font-family: "Courier New", monospace;
-    font-size: 17px;
+    font-size: 14px;
     color: #38bdf8;
     text-shadow:
         0 0 8px #38bdf8,
@@ -2220,23 +2220,20 @@ footer {
 @media (max-width: 768px) {
 
     .code-lines {
-        right: -100px;
-        top: 15%;
-        width: 350px;
-        opacity: 0.18;
+        left: auto;
+        right: -14px;
+        top: 60%;
+        width: 250px;
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        transform: rotate(-4deg);
+        opacity: 0.34;
     }
 
-    .code-lines {
-    position: absolute;
-    left: 8%;
-    top: 20%;
-    width: 430px;
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-    transform: rotate(-3deg);
-    opacity: 0.35;
-}
+    .code-lines span {
+        font-size: 13px;
+    }
 
     .seo-circle {
     position: absolute;
@@ -8236,6 +8233,10 @@ html.reveal-ready .campus-twin-card.is-tilting:hover {
 @media (prefers-reduced-motion: reduce) {
 
     .hero-image img {
+        animation: none;
+    }
+
+    .code-lines span {
         animation: none;
     }
 }
