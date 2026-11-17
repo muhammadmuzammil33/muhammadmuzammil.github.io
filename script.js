@@ -453,7 +453,7 @@ if (reduceMotion) {
     }
 
     var cards = document.querySelectorAll(
-        ".seo-project-card, .web-project-card, .taskflow-card"
+        ".seo-project-card, .web-project-card, .taskflow-card, .campus-twin-card"
     );
 
     var MAX_TILT = 5;

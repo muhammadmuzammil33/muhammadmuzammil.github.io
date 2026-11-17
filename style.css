@@ -7398,13 +7398,15 @@ nav ul li a.is-active::after {
 
 html.reveal-ready .seo-project-card.is-tilting,
 html.reveal-ready .web-project-card.is-tilting,
-html.reveal-ready .taskflow-card.is-tilting {
+html.reveal-ready .taskflow-card.is-tilting,
+html.reveal-ready .campus-twin-card.is-tilting {
     transition: transform 0.12s ease-out;
 }
 
 html.reveal-ready .seo-project-card.is-tilting:hover,
 html.reveal-ready .web-project-card.is-tilting:hover,
-html.reveal-ready .taskflow-card.is-tilting:hover {
+html.reveal-ready .taskflow-card.is-tilting:hover,
+html.reveal-ready .campus-twin-card.is-tilting:hover {
     border-color: #38bdf8;
 
     box-shadow:
@@ -7971,5 +7973,29 @@ html.reveal-ready .taskflow-card.is-tilting:hover {
     .hero-image,
     .hero-shine::before {
         transition: none;
+    }
+}
+
+
+/* =========================
+   CAMPUS TWIN CARD
+========================= */
+
+.campus-twin-card .case-management-preview img {
+    object-position: center;
+
+    transition: transform 1s cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+
+.campus-twin-card .case-management-preview .project-number {
+    color: rgba(255, 255, 255, 0.55);
+
+    text-shadow: 0 2px 12px rgba(7, 17, 31, 0.55);
+}
+
+@media (hover: hover) {
+
+    .campus-twin-card:hover .case-management-preview img {
+        transform: scale(1.04);
     }
 }
