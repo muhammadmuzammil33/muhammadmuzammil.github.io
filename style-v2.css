@@ -1572,6 +1572,19 @@ section:not(.hero) h2::after {
 }
 
 
+/* Nested backdrop filters inside the frosted cards re-blur on every scroll
+   frame and hover transition. The cards' tint is near-opaque, so the blur
+   adds no visible depth here. */
+
+#skills .skill-box,
+#skills .skill-item,
+#skills .skill-tools span {
+    -webkit-backdrop-filter: none;
+
+    backdrop-filter: none;
+}
+
+
 /* =========================================================
    BOX ANIMATIONS
    ========================================================= */
@@ -6307,11 +6320,13 @@ body.lightbox-open {
     content: "";
 
     position: absolute;
-    inset: 0;
+    inset: -64px;
 
     z-index: -1;
 
     pointer-events: none;
+
+    will-change: transform;
 
     background-image:
         linear-gradient(
@@ -6348,11 +6363,11 @@ body.lightbox-open {
 @keyframes skillsGridDrift {
 
     from {
-        background-position: 0 0, 0 0;
+        transform: translate3d(0, 0, 0);
     }
 
     to {
-        background-position: 64px 64px, 64px 64px;
+        transform: translate3d(64px, 64px, 0);
     }
 }
 
